@@ -1,1 +1,4 @@
 npm install hexo --save
+
+
+hexo d -g
