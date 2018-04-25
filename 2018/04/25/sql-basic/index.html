@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql基础">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/sql-basic/index.html">
+<meta property="og:site_name" content="LiBurro">
+<meta property="og:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-25T11:44:41.691Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sql基础">
+<meta name="twitter:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>sql基础</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/04/25/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/04/25/sql-basic/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/04/25/sql-basic/&text=sql基础"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/04/25/sql-basic/&is_video=false&description=sql基础"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=sql基础&body=Check out this article: http://yoursite.com/2018/04/25/sql-basic/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/04/25/sql-basic/&name=sql基础&description=&lt;p&gt;本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建数据库"><span class="toc-number">1.1.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建表"><span class="toc-number">1.2.</span> <span class="toc-text">创建表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SELECT语句"><span class="toc-number">1.3.</span> <span class="toc-text">SELECT语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WHERE语句"><span class="toc-number">1.4.</span> <span class="toc-text">WHERE语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INSERT语句"><span class="toc-number">1.5.</span> <span class="toc-text">INSERT语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UPDATE语句"><span class="toc-number">1.6.</span> <span class="toc-text">UPDATE语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DELETE语句"><span class="toc-number">1.7.</span> <span class="toc-text">DELETE语句</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        sql基础
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">LiBurro</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-25T06:44:47.000Z" itemprop="datePublished">2018-04-25</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。</p>
+<a id="more"></a>
+<p>参考链接:</p>
+<ul>
+<li><a href="http://www.w3school.com.cn/sql/" target="_blank" rel="noopener">http://www.w3school.com.cn/sql/</a></li>
+</ul>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><p>数据库是数据的容器，在做任何有关数据的操作时，都需要创建一个数据库。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] database_name;</span><br></pre></td></tr></table></figure>
+<p>注意 <code>IF NOT EXISTS</code>语句是可选的，这句话的意思是如果在服务器已经有了和当前需要创建的数据库同名的数据库，就不创建。</p>
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p>mysql等数据库，都是需要用表来存放数据的。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] table_name(</span><br><span class="line">    column_list</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>举例:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> test_table(</span><br><span class="line">    table_id <span class="built_in">INT</span> AUTO_INCREMENT, #设置一个列，取名叫table_id，数据类型为<span class="built_in">INT</span>，并且是自动增长的</span><br><span class="line">    title <span class="built_in">VARCHAR</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>, #创建title列，数据类型为<span class="built_in">VARCHAR</span>类型，最长<span class="number">10</span>，并且不为空</span><br><span class="line">    create_date <span class="built_in">DATE</span>, #创建create_date列，数据类型为<span class="built_in">DATE</span>，可以为空</span><br><span class="line">    usercount <span class="built_in">INT</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>, #创建usercount列，设置默认值为<span class="number">0</span></span><br><span class="line">    PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>), #设置主键为<span class="keyword">id</span></span><br><span class="line">    <span class="keyword">UNIQUE</span> (title), #设置title必须唯一</span><br><span class="line">    <span class="keyword">CHECK</span> (usercount&gt;<span class="number">-1</span>), #设置usercount列的数据不能是负数</span><br><span class="line">    FOREGIN <span class="keyword">KEY</span> (another_id) <span class="keyword">REFERENCES</span> anoter_table(another_id), #设置another_id列，并且与anoter_table表的another_id关联</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>解释:</p>
+<blockquote>
+<p>主键的作用：确定了数据的唯一性，便于其它表的关联，配合索引提升数据查找性能<br>SQL约束：<code>NOT NULL</code>, <code>UNIQUE</code>, <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>DEFAULT</code>, <code>CHECK</code></p>
+</blockquote>
+<h3 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h3><p>基本语法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+<p>或者:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+<h3 id="WHERE语句"><a href="#WHERE语句" class="headerlink" title="WHERE语句"></a>WHERE语句</h3><p>基本语法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> cloumn_name=<span class="string">'condition'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="INSERT语句"><a href="#INSERT语句" class="headerlink" title="INSERT语句"></a>INSERT语句</h3><p>基本语法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 指定列名插入</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name(column1, column2) <span class="keyword">VALUES</span> (value1, value2);</span><br><span class="line"></span><br><span class="line"># 指定列名插入多条数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name(column1, column2) <span class="keyword">VALUES</span> (value1, value2), (value11, value22);</span><br><span class="line"></span><br><span class="line"># 如果插入全部数据，可以不指定列名，注意自动增加的字段可以不写</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name <span class="keyword">VALUES</span> (value1, value2);</span><br><span class="line"></span><br><span class="line"># 不指定列名插入多条数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name <span class="keyword">VALUES</span> (value1, value2), (value11, value22);</span><br></pre></td></tr></table></figure>
+<h3 id="UPDATE语句"><a href="#UPDATE语句" class="headerlink" title="UPDATE语句"></a>UPDATE语句</h3><p>基本语法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table_name <span class="keyword">SET</span> column1 = new_value1, column2 = new_value2 <span class="keyword">WHERE</span> condition;</span><br></pre></td></tr></table></figure>
+<p>注意: SET后面是需要更新的列，指定多列，中间用英文的逗号分开，WHERE语句是可选的，如果没有这个语句，默认更新所有的行的数据。</p>
+<h3 id="DELETE语句"><a href="#DELETE语句" class="headerlink" title="DELETE语句"></a>DELETE语句</h3><p>基本语法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> condition;</span><br></pre></td></tr></table></figure>
+<p>注意: 如果没有WHERE子句进行限制，默认删除所有的数据。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建数据库"><span class="toc-number">1.1.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建表"><span class="toc-number">1.2.</span> <span class="toc-text">创建表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SELECT语句"><span class="toc-number">1.3.</span> <span class="toc-text">SELECT语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WHERE语句"><span class="toc-number">1.4.</span> <span class="toc-text">WHERE语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INSERT语句"><span class="toc-number">1.5.</span> <span class="toc-text">INSERT语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UPDATE语句"><span class="toc-number">1.6.</span> <span class="toc-text">UPDATE语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DELETE语句"><span class="toc-number">1.7.</span> <span class="toc-text">DELETE语句</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/04/25/sql-basic/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/04/25/sql-basic/&text=sql基础"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/04/25/sql-basic/&is_video=false&description=sql基础"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=sql基础&body=Check out this article: http://yoursite.com/2018/04/25/sql-basic/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/04/25/sql-basic/&title=sql基础"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/04/25/sql-basic/&name=sql基础&description=&lt;p&gt;本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Lin Lei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
