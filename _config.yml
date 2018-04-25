@@ -58,11 +58,11 @@ default_category: uncategorized
 category_map:
   PYTHON: python
   ROBOTFRAMEWORK: robotframework
-  SQL: sql
+  DATABASE: database
+  TOOLS: tools
   MARKDOWN: markdown
   
 tag_map:
-  基础: basic
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
