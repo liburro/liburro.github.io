@@ -16,8 +16,12 @@ direction: ltr
 nav:
   home: /
   #about: /about/
-  articles: /archives/
-  projects: projects_url
+  #articles: /archives/
+  #projects: projects_url
+  python: /categories/python
+  robotframework: /categories/robotframework
+  database: /categories/database
+  tools: /categories/tools
 
 
 # Links to your social media accounts.
@@ -25,11 +29,11 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+ # github: http://github.com/probberechts/cactus-dark
+ # twitter: /
+ # facebook: /
+ # linkedin: /
+ # mail: mailto:name@email.com
 
 
 # Customize the overview with the most recent blog posts on the index page.
