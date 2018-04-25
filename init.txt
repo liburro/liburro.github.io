@@ -2,3 +2,5 @@ npm install hexo --save
 
 
 hexo d -g
+
+https://github.com/probberechts/hexo-theme-cactus/blob/master/README.md
