@@ -1,5 +1,5 @@
 ---
-title: sql基础
+title: '[SQL]-sql基础'
 date: 2018-04-25 14:44:47
 tags:
 categories: [DATABASE]

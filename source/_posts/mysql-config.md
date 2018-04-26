@@ -1,5 +1,5 @@
 ---
-title: mysql学习环境搭建
+title: '[mysql]-mysql学习环境搭建'
 date: 2018-04-26 17:18:26
 tags:
 categories: DATABASE
