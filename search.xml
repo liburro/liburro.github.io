@@ -3,14 +3,89 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2018/04/25/hello-world/"/>
-      <url>/2018/04/25/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>]]></content>
+      <title>robotframework-指导说明</title>
+      <link href="/2018/04/26/robotframework-user-guide/"/>
+      <url>/2018/04/26/robotframework-user-guide/</url>
+      <content type="html"><![CDATA[]]></content>
       
       <categories>
           
-          <category> MARKDOWN </category>
+          <category> ROBOTFRAMEWORK </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>[语法]-表语</title>
+      <link href="/2018/04/26/english-predicative/"/>
+      <url>/2018/04/26/english-predicative/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      <categories>
+          
+          <category> ENGLISH </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>[python]-进阶及技巧</title>
+      <link href="/2018/04/26/python-basic/"/>
+      <url>/2018/04/26/python-basic/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      <categories>
+          
+          <category> PYTHON </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>hexo配置</title>
+      <link href="/2018/04/26/hexo-config/"/>
+      <url>/2018/04/26/hexo-config/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      <categories>
+          
+          <category> TOOLS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>[linux]-vim</title>
+      <link href="/2018/04/26/linux-vim/"/>
+      <url>/2018/04/26/linux-vim/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      <categories>
+          
+          <category> LINUX </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>[Linux]-文件查看操作</title>
+      <link href="/2018/04/26/linux-view-file/"/>
+      <url>/2018/04/26/linux-view-file/</url>
+      <content type="html"><![CDATA[<p>本文主要对Linux下查看文件的几个命令的常用方式进行了总结，没有进行详细解释，适合作为查阅，备忘。</p><a id="more"></a><h2 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h2><p>一次显示整个文件，参数:</p><p>-n: 输出行号<br>-b: 输出行号，但是忽略空白行</p><h2 id="more"><a href="#more" class="headerlink" title="more"></a>more</h2><p>每次显示一屏内容</p><p>按键：<br>enter 下一行<br>space 下一屏<br>= 显示当前行号<br>:f 显示当前文件和行号<br>ctrl+b 上一屏(对应的ctrl+f下一屏)</p><p>参数：<br>+num 从num行开始显示<br>-num 每屏显示num行<br>+/pattern 从第一个匹配pattern的前两行开始显示</p><p>举例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ more +10 file</span><br><span class="line">$ more -10 file</span><br><span class="line">$ more +10 -10 file</span><br><span class="line">$ more +/<span class="built_in">test</span> -10 file</span><br></pre></td></tr></table></figure></p><h2 id="less"><a href="#less" class="headerlink" title="less"></a>less</h2><p>类似于<a href="#more">more</a>，但是less支持使用page down 和 page up进行翻页。<br>less 和 more 都支持v命令直接调用vim编辑器，都支持-s参数把多个连续的空行显示为一行。</p><p>按键：<br>enter 下一行<br>y 上一行<br>g 调到最开始<br>G 调到最末尾<br>n 显示下一个搜索的匹配<br>N 显示上一个搜索的匹配<br>m 输入以后会提示输入标记，比如输入a，那么当浏览到其它内容以后，想回到a这个标记点，输入’a就可以了</p><p>参数：<br>-i 文章内进行搜索的时候忽略大小写<br>-N 显示行号<br>-M 显示读取进度，显示内容类似：<code>iperft lines 19-48/1836 3%</code> 分别表示文件名iperft，当前屏幕显示的是19-48行，总共1836行</p><h2 id="head"><a href="#head" class="headerlink" title="head"></a>head</h2><p>默认显示文件的前10行，-n num参数可以指定显示多少行，这个参数对<a href="#tail">tail</a>命令也适用。</p><h2 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h2><p>默认显示文件的最后10行</p><h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>可以进行字符匹配，-i 忽略大小写， -n 显示行号， -v 反向匹配</p><p>比如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ grep -i <span class="built_in">test</span> file</span><br><span class="line">$ grep -ni <span class="built_in">test</span> file</span><br><span class="line">$ ps -ef | grep firefox -v grep</span><br></pre></td></tr></table></figure><h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><p>计算byte，字数或者列数</p><p>比如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll | wc -l <span class="comment">#显示ll命令回显有多少行</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> LINUX </category>
           
       </categories>
       
@@ -26,6 +101,21 @@
       <categories>
           
           <category> DATABASE </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2017/04/26/hello-world/"/>
+      <url>/2017/04/26/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> MARKDOWN </category>
           
       </categories>
       
