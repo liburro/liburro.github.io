@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>mysql学习环境搭建</title>
+      <link href="/2018/04/26/mysql-config/"/>
+      <url>/2018/04/26/mysql-config/</url>
+      <content type="html"><![CDATA[<p>本文主要介绍了学习sql语句的环境配置，主要使用windows+xampp进行一键环境搭建，用于学习sql基本语句已经完全够用。</p><a id="more"></a><h2 id="xampp的配置"><a href="#xampp的配置" class="headerlink" title="xampp的配置"></a>xampp的配置</h2><p><a href="!https://www.apachefriends.org/zh_cn/index.html">xampp</a>是一个强大的建站集成软件包，里面包含了Apache, Mysql, PHP等常用的环境。而且支持Windows, Linux, Mac OS等环境，语言也支持中文。本文以windows为例进行配置。</p><p>下载好xampp以后，全部默认点击下一步就可以安装完成，默认一般安装在c:\xampp这个位置，桌面也会生成xampp的快捷方式，打开后类似如下界面：</p><p><img src="/2018/04/26/mysql-config/xampp-startup.png" alt="xampp-startup"></p><p>分别把Apache和MySQL启动起来，其它的不在本文讨论范围，启动后类似界面如下：</p><p><img src="/2018/04/26/mysql-config/xampp-mysql.png" alt="xampp-mysql"></p><p>点击MySQL的Admin，将会打开一个浏览器窗口，类似如下界面：</p><p><img src="/2018/04/26/mysql-config/xampp-phpmyadmin.png" alt="xampp-phpmyadmin"></p><p>其中红色框内的几个区域说明如下：<br>区域1：表示当前mysql数据库里面有哪些数据库<br>区域2：表示当前选中的数据库sks下面有哪些数据表<br>区域3和区域4：表示对选中的数据库进行SQL语句，也就是以后使用SQL语句进行增删查改操作的地方<br>区域5：最后执行</p><p>OK,经过上面的配置，基本的使用mysql来学习SQL语句已经可以满足要求了。</p>]]></content>
+      
+      <categories>
+          
+          <category> DATABASE </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>robotframework-指导说明</title>
       <link href="/2018/04/26/robotframework-user-guide/"/>
       <url>/2018/04/26/robotframework-user-guide/</url>
