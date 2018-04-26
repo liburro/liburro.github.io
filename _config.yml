@@ -58,6 +58,8 @@ default_category: uncategorized
 category_map:
   PYTHON: python
   ROBOTFRAMEWORK: robotframework
+  LINUX: linux
+  ENGLISH: english
   DATABASE: database
   TOOLS: tools
   MARKDOWN: markdown

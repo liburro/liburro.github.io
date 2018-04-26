@@ -20,6 +20,8 @@ nav:
   #projects: projects_url
   python: /categories/python
   robotframework: /categories/robotframework
+  linux: categories/linux
+  english: categories/english
   database: /categories/database
   tools: /categories/tools
 
@@ -41,8 +43,8 @@ social_links:
 #   - show_all_posts: whether to show all available posts.
 #   - post_count: whether to show only the x most recent posts.
 posts_overview:
-  show_all_posts: false
-  post_count: 5
+  show_all_posts: true
+  #post_count: 5
 
 
 ##############################################################################
