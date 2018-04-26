@@ -54,7 +54,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: OTHER
 category_map:
   PYTHON: python
   ROBOTFRAMEWORK: robotframework
@@ -63,6 +63,7 @@ category_map:
   DATABASE: database
   TOOLS: tools
   MARKDOWN: markdown
+  OTHER: other
   
 tag_map:
 
