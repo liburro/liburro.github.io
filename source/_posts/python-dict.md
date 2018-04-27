@@ -150,6 +150,9 @@ Out[52]: dict_keys(['a', 'b', 'c', 'd', 'e', 'f'])
 from collections import OrderedDcit
 ```
 使用方法和一般字典使用方法一致。注意函数popitem()的使用。
+
+### popitem()
+
 在一般字典中：
 ``` python
 dict.popitem()
@@ -161,6 +164,8 @@ dict.popitem()
 ord.popitem(last=True)
 ```
 这里有一个参数last，默认是True，表示移除最后一个元素，如果为False，则移除第一个元素，这里移除的内容就一定是确定的。同理，字典为空，抛出KeyError异常。
+
+### move_to_end()
 
 OrderdDict多了一个`move_to_end`函数，有两个参数，第一个参数是待移动的key，第二个参数表示移动到最后(True默认值)还是移动到开头(False)。
 
