@@ -17,8 +17,11 @@
 <meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-console.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/py3-virtual.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/py3-active.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-virtual.png">
-<meta property="og:updated_time" content="2018-04-27T02:30:01.556Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-virtual1.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-virtual2.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-virtual3.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/python-virtualenv/pip-virtual4.png">
+<meta property="og:updated_time" content="2018-04-27T02:34:53.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[python]-lib-virtualenv">
 <meta name="twitter:description" content="现在python有python2和python3两个版本，在windows上支持同时安装这两个版本的解释器，那么如何快速切换我们的开发环境呢。 首先如果只是作为调试，我们可以使用py -2和py -3命令来进入python的版本。  同理，pip也支持：  下面说一下virtualenv这个工具的使用，看下面的实例： 1D:\Program Files&amp;gt;virtualenv -p &amp;quot">
@@ -161,7 +164,7 @@
 <p><img src="/2018/04/27/python-virtualenv/py3-active.png" alt="py3-active"></p>
 <p>可以看见直接使用的是python命令，并且进入了python3的环境。注意上面的实际配置路径需要根据你自己机器上的路径配置。</p>
 <p>virtualenv工具的作用就是创建一个独立的python开发环境，这里面的所有环境都是独立的，不会影响你原来的环境等信息(当然可以认为的修改)。</p>
-<p>我们来看一下pip的使用：<br><img src="/2018/04/27/python-virtualenv/pip-virtual.png" alt="pip-virtual"></p>
+<p>我们来看一下pip的使用：<br><img src="/2018/04/27/python-virtualenv/pip-virtual1.png" alt="pip-virtual"><br><img src="/2018/04/27/python-virtualenv/pip-virtual2.png" alt="pip-virtual"><br><img src="/2018/04/27/python-virtualenv/pip-virtual3.png" alt="pip-virtual"><br><img src="/2018/04/27/python-virtualenv/pip-virtual4.png" alt="pip-virtual"></p>
 <p>红色区域1：在虚拟环境下进入python，引入一个click库，由于没有安装，所以引入失败<br>红色区域2：我们在虚拟环境下使用pip install click安装了click这个库，再次引入，成功了<br>红色区域3：调用deactive.bat退出当前的虚拟环境<br>红色区域4：进入系统的python3,引入click，引入失败，因为虚拟环境没有改变我们的外部环境</p>
 <p>virtualenv还有很多的参数，通过：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv -h</span><br></pre></td></tr></table></figure></p>
 <p>可以查看帮助信息</p>
