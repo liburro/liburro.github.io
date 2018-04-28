@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="参考链接：  https://www.cnblogs.com/fengxiongZz/p/7707219.html https://www.jianshu.com/p/beb8d611340a  本文是在windows10下进行的配置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[hexo]-使用hexo+github搭建blog">
+<meta property="og:url" content="http://yoursite.com/2018/04/28/hexo-config/index.html">
+<meta property="og:site_name" content="LiBurro">
+<meta property="og:description" content="参考链接：  https://www.cnblogs.com/fengxiongZz/p/7707219.html https://www.jianshu.com/p/beb8d611340a  本文是在windows10下进行的配置。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/nodejs.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/git.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/git-bin.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/github-repository.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/hexo-version.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/hexo-server.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/28/hexo-config/hexo-succ.png">
+<meta property="og:updated_time" content="2018-04-28T03:54:11.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[hexo]-使用hexo+github搭建blog">
+<meta name="twitter:description" content="参考链接：  https://www.cnblogs.com/fengxiongZz/p/7707219.html https://www.jianshu.com/p/beb8d611340a  本文是在windows10下进行的配置。">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/28/hexo-config/nodejs.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>[hexo]-使用hexo+github搭建blog</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/linux">linux</a></li>
+         
+          <li><a href="/categories/english">英语</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/04/27/db-redis-basic/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/04/28/hexo-config/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/04/28/hexo-config/&text=[hexo]-使用hexo+github搭建blog"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/04/28/hexo-config/&is_video=false&description=[hexo]-使用hexo+github搭建blog"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[hexo]-使用hexo+github搭建blog&body=Check out this article: http://yoursite.com/2018/04/28/hexo-config/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/04/28/hexo-config/&name=[hexo]-使用hexo+github搭建blog&description=&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/fengxiongZz/p/7707219.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.cnblogs.com/fengxiongZz/p/7707219.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/beb8d611340a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.jianshu.com/p/beb8d611340a&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本文是在windows10下进行的配置。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#node-js安装"><span class="toc-number">1.</span> <span class="toc-text">node.js安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git安装"><span class="toc-number">2.</span> <span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github配置"><span class="toc-number">3.</span> <span class="toc-text">github配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">4.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo与github关联"><span class="toc-number">5.</span> <span class="toc-text">hexo与github关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建文章"><span class="toc-number">6.</span> <span class="toc-text">新建文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo配置文件"><span class="toc-number">7.</span> <span class="toc-text">hexo配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#根目录-config-yml配置"><span class="toc-number">7.1.</span> <span class="toc-text">根目录_config.yml配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#theme下-config-yml配置"><span class="toc-number">7.2.</span> <span class="toc-text">theme下_config.yml配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章里面的配置"><span class="toc-number">7.3.</span> <span class="toc-text">文章里面的配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在其它机器写文章"><span class="toc-number">8.</span> <span class="toc-text">在其它机器写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评论功能增加"><span class="toc-number">9.</span> <span class="toc-text">评论功能增加</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        [hexo]-使用hexo+github搭建blog
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">LiBurro</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-28T08:36:36.000Z" itemprop="datePublished">2018-04-28</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>参考链接：</p>
+<ol>
+<li><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a></li>
+<li><a href="https://www.jianshu.com/p/beb8d611340a" target="_blank" rel="noopener">https://www.jianshu.com/p/beb8d611340a</a></li>
+</ol>
+<p>本文是在windows10下进行的配置。</p>
+<a id="more"></a>
+<h2 id="node-js安装"><a href="#node-js安装" class="headerlink" title="node.js安装"></a>node.js安装</h2><p>下载好node.js后安装完成后，输入如下命令表示成功：</p>
+<p><img src="/2018/04/28/hexo-config/nodejs.png" alt="nodejs"></p>
+<h2 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h2><p>下载好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>，安装完成后，输入如下命令表示成功：</p>
+<p><img src="/2018/04/28/hexo-config/git.png" alt="git"></p>
+<p>如果命令失败，需要把git安装目录下的bin目录加入到环境变量里面，比如我的是：”c:/Program Files/Git/bin”，这个目录下有如下几个文件</p>
+<p><img src="/2018/04/28/hexo-config/git-bin.png" alt="git"></p>
+<h2 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h2><p>进入<a href="https://github.com/" target="_blank" rel="noopener">github</a>注册一个账号，并且创建一个repository，注意名字必须是username.github.io格式，username是你注册的用户名。</p>
+<p><img src="/2018/04/28/hexo-config/github-repository.png" alt="gitbug"></p>
+<p>可以通过<a href="https://username.github.io/的方式访问你的首页了。" target="_blank" rel="noopener">https://username.github.io/的方式访问你的首页了。</a></p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任何适合的地方通过下面的命令安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+<p>输入下面的命令，表示安装成功：</p>
+<p><img src="/2018/04/28/hexo-config/hexo-version.png" alt="hexo-version"></p>
+<p>然后使用下面命令初始化hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>使用下面的命令安装依赖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>使用下面的命令生成页面</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>使用下面的命令启动服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/04/28/hexo-config/hexo-server.png" alt="hexo-server"></p>
+<p>根据提示访问这个网页，如果打不开，使用下面的命令修改端口号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></table></figure>
+<p>打开页面后出现下面的界面表示配置成功</p>
+<p><img src="/2018/04/28/hexo-config/hexo-succ.png" alt="hexo-succ"></p>
+<h2 id="hexo与github关联"><a href="#hexo与github关联" class="headerlink" title="hexo与github关联"></a>hexo与github关联</h2><p>至于github上的权限等配置，这里不讲诉，本文只说明hexo与github的关联配置信息。</p>
+<p>在我们刚刚操作的目录下有一个<code>_config.yml</code>文件，请在最后添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">    repository: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">      branch: master</span><br></pre></td></tr></table></figure>
+<p>注意修改yourname为你自己的username</p>
+<p>在发布以前需要安装下面的插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>安装好以后使用下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>完成后，通过yourname.github.io就可以访问你的网页了。</p>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n name</span><br></pre></td></tr></table></figure>
+<p>其中name替换成你想要的名字，会在<code>source\_posts</code>下生成你新建的文件，默认是md格式的，可以打开这个文件按照md的格式进行编写文章了。</p>
+<p>如果需要图片支持，需要安装下面的插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>以后使用hexo n命令的时候，会在文章<code>source\_posts</code>这里生成和你文件名对应的目录，文章里面使用md语法<code>![comt](name\xx.png)</code>的格式插入图片了。</p>
+<h2 id="hexo配置文件"><a href="#hexo配置文件" class="headerlink" title="hexo配置文件"></a>hexo配置文件</h2><h3 id="根目录-config-yml配置"><a href="#根目录-config-yml配置" class="headerlink" title="根目录_config.yml配置"></a>根目录<code>_config.yml</code>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Title</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">language: zh-CN <span class="comment">#语言，这个在theme\languages目录下的对应</span></span><br><span class="line">timezone: Asia/Shanghai <span class="comment">#时间</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">category_map:</span><br><span class="line">  PYTHON: python</span><br><span class="line">  ROBOTFRAMEWORK: robotframework</span><br><span class="line">  LINUX: linux</span><br><span class="line">  ENGLISH: english</span><br><span class="line">  DATABASE: database</span><br><span class="line">  TOOLS: tools</span><br><span class="line">  MARKDOWN: markdown</span><br><span class="line">  OTHER: other</span><br></pre></td></tr></table></figure>
+<p>这里是每个文章的categories字段，生成对应的url，默认生成的是categories字段，如果这里面有中文，url里面也会包含中文，这里就可以对它进行映射，使url里面无中文。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: cactus <span class="comment">#配置主题，和theme下面的名字一样</span></span><br></pre></td></tr></table></figure>
+<h3 id="theme下-config-yml配置"><a href="#theme下-config-yml配置" class="headerlink" title="theme下_config.yml配置"></a>theme下<code>_config.yml</code>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nav:</span><br><span class="line">  home: /</span><br><span class="line">  python: /categories/python</span><br><span class="line">  robotframework: /categories/robotframework</span><br><span class="line">  linux: categories/linux</span><br></pre></td></tr></table></figure>
+<p>这里主要是对导航栏进行配置，注意我的主题是cactus，每个主题的配置有所不一样。</p>
+<h3 id="文章里面的配置"><a href="#文章里面的配置" class="headerlink" title="文章里面的配置"></a>文章里面的配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="string">'[redis]-基本操作'</span> <span class="comment">#文章标题，可以和文件名不一样</span></span><br><span class="line">date: 2018-04-27 19:07:35 <span class="comment">#创建时间</span></span><br><span class="line">tags: <span class="comment">#tag</span></span><br><span class="line">categories: DATABASE <span class="comment"># 这里就是分类，可以使用[a, b]方式，表示多类</span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt; <span class="comment">#有的主题会显示文章的全部内容，这里可以进行区分，后面的内容就不会默认显示在首页了。</span></span><br></pre></td></tr></table></figure>
+<h2 id="在其它机器写文章"><a href="#在其它机器写文章" class="headerlink" title="在其它机器写文章"></a>在其它机器写文章</h2><p>我们现在所有的文件都是在当前机器上进行的，怎么换到其它机器上写文章呢。</p>
+<p>我们在任意一个地方使用下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yourname/hexo-test.github.io.git</span><br></pre></td></tr></table></figure>
+<p>注意替换相应的内容，克隆我们的服务器文件，<br>然后删除里面的所有内容，注意如果你开启了查看隐藏文件的功能，不要把<code>.git</code>这个文件删除<br>然后使用下面的命令创建一个分支，我们取名叫hexo，这个名字按照自己喜好命名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
+<p>然后把你自己写文章的目录下的所有内容拷贝过来。</p>
+<p>分别使用如下的命令进行提交：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"Create new branch(hexo)."</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --<span class="built_in">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure>
+<p>这时候我们的github上就会多一个hexo分支，以后其它机器就可以通过下面的命令进行克隆代码，到其它机器写文章了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo your_git_url</span><br></pre></td></tr></table></figure>
+<p>注意以后写文章，提交到git，尽量使用下面的命令进行提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
+<h2 id="评论功能增加"><a href="#评论功能增加" class="headerlink" title="评论功能增加"></a>评论功能增加</h2>
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/linux">linux</a></li>
+         
+          <li><a href="/categories/english">英语</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#node-js安装"><span class="toc-number">1.</span> <span class="toc-text">node.js安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git安装"><span class="toc-number">2.</span> <span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github配置"><span class="toc-number">3.</span> <span class="toc-text">github配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">4.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo与github关联"><span class="toc-number">5.</span> <span class="toc-text">hexo与github关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建文章"><span class="toc-number">6.</span> <span class="toc-text">新建文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo配置文件"><span class="toc-number">7.</span> <span class="toc-text">hexo配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#根目录-config-yml配置"><span class="toc-number">7.1.</span> <span class="toc-text">根目录_config.yml配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#theme下-config-yml配置"><span class="toc-number">7.2.</span> <span class="toc-text">theme下_config.yml配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章里面的配置"><span class="toc-number">7.3.</span> <span class="toc-text">文章里面的配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在其它机器写文章"><span class="toc-number">8.</span> <span class="toc-text">在其它机器写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评论功能增加"><span class="toc-number">9.</span> <span class="toc-text">评论功能增加</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/04/28/hexo-config/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/04/28/hexo-config/&text=[hexo]-使用hexo+github搭建blog"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/04/28/hexo-config/&is_video=false&description=[hexo]-使用hexo+github搭建blog"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[hexo]-使用hexo+github搭建blog&body=Check out this article: http://yoursite.com/2018/04/28/hexo-config/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/04/28/hexo-config/&title=[hexo]-使用hexo+github搭建blog"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/04/28/hexo-config/&name=[hexo]-使用hexo+github搭建blog&description=&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/fengxiongZz/p/7707219.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.cnblogs.com/fengxiongZz/p/7707219.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/beb8d611340a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.jianshu.com/p/beb8d611340a&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本文是在windows10下进行的配置。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Lin Lei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/python">python</a></li>
+         
+          <li><a href="/categories/robotframework">robotframework</a></li>
+         
+          <li><a href="/categories/linux">linux</a></li>
+         
+          <li><a href="/categories/english">英语</a></li>
+         
+          <li><a href="/categories/database">数据库</a></li>
+         
+          <li><a href="/categories/tools">工具</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
