@@ -5,7 +5,7 @@ tags:
 categories: [DATABASE]
 ---
 
-本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。
+本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。
 
 <!--more-->
 
@@ -43,7 +43,7 @@ CREATE TABLE test_table(
     title VARCHAR(10) NOT NULL, #创建title列，数据类型为VARCHAR类型，最长10，并且不为空
     create_date DATE, #创建create_date列，数据类型为DATE，可以为空
     usercount INT DEFAULT 0, #创建usercount列，设置默认值为0
-    PRIMARY KEY (id), #设置主键为id
+    PRIMARY KEY (table_id), #设置主键为table_id
     UNIQUE (title), #设置title必须唯一
     CHECK (usercount>-1), #设置usercount列的数据不能是负数
     FOREGIN KEY (another_id) REFERENCES anoter_table(another_id), #设置another_id列，并且与anoter_table表的another_id关联
@@ -112,3 +112,24 @@ DELETE FROM table_name WHERE condition;
 ```
 
 注意: 如果没有WHERE子句进行限制，默认删除所有的数据。
+
+### COUNT函数
+
+``` sql
+SELECT COUNT(*) FROM table_name;
+SELECT column1, COUNT(*) FROM table_name WHERE column2=condition;
+```
+
+### GROUP BY
+
+``` sql
+SELECT column1 FROM table_name WHERE column1=condition;
+```
+
+### ORDER BY(DESC)
+
+``` sql
+SELECT * FROM table_name ORDER BY column1;
+SELECT * FROM table_name ORDER BY column1 DESC;
+SELECT column1, column2 FROM table_name GROUP BY column1 ORDER BY column2;
+```
