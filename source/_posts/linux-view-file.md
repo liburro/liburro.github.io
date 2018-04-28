@@ -2,7 +2,7 @@
 title: '[Linux]-文件查看操作'
 date: 2018-04-26 13:47:37
 tags:
-categories: LINUX
+categories: linux
 ---
 
 本文主要对Linux下查看文件的几个命令的常用方式进行了总结，没有进行详细解释，适合作为查阅，备忘。

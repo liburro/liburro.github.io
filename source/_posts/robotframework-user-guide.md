@@ -2,8 +2,12 @@
 title: '[robotframework]-指导说明'
 date: 2018-04-26 17:08:35
 tags:
-categories: ROBOTFRAMEWORK
+categories: robotframework
 ---
+
+robotframework是一个自动化测试框架。
+
+<!--more-->
 
 ## 基础实例
 ## case的组织

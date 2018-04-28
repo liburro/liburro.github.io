@@ -1,17 +1,15 @@
 ---
-title: '[hexo]-使用hexo+github搭建blog'
+title: '[HEXO]-使用hexo+github搭建blog'
 date: 2018-04-28 16:36:36
 tags:
-categories: TOOLS
+categories: 工具
 ---
+本文是在windows10下进行的配置。
+<!--more-->
 
 参考链接：
 1. https://www.cnblogs.com/fengxiongZz/p/7707219.html
 1. https://www.jianshu.com/p/beb8d611340a
-
-本文是在windows10下进行的配置。
-
-<!--more-->
 
 ## node.js安装
 
@@ -79,6 +77,18 @@ hexo s
 
 ``` bash
 hexo s -p 5000
+```
+
+当然你可以启用debug信息：
+
+``` bash
+hexo s -p 5000 --debug
+```
+
+有时候发现浏览器更新不及时，使用下面的命令清理缓存
+
+``` bash
+hexo clean
 ```
 
 打开页面后出现下面的界面表示配置成功
@@ -231,6 +241,22 @@ git clone -b hexo your_git_url
 ``` bash
 git push origin hexo
 ```
+
+## 主题
+
+本文以NexT为主题，进入的你站点目录下，使用命令：
+
+``` bash
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+```
+
+进行安装，然后修改站点的config文件，修改：
+
+``` bash
+theme: next
+```
+
+以后的配置都是在这个主题下进行配置。
 
 ## 评论功能增加
 

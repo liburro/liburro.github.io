@@ -8,7 +8,7 @@ subtitle:
 description:
 keywords:
 author: Lin Lei
-language: zh-CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
@@ -56,14 +56,9 @@ index_generator:
 # Category & Tag
 default_category: OTHER
 category_map:
-  PYTHON: python
-  ROBOTFRAMEWORK: robotframework
-  LINUX: linux
-  ENGLISH: english
-  DATABASE: database
-  TOOLS: tools
-  MARKDOWN: markdown
-  OTHER: other
+  英语: english
+  数据库: database
+  工具: tools
   
 tag_map:
 
@@ -83,7 +78,8 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: cactus
+# theme: cactus
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -2,7 +2,7 @@
 title: '[mysql]-mysql学习环境搭建'
 date: 2018-04-26 17:18:26
 tags:
-categories: DATABASE
+categories: 数据库
 ---
 
 本文主要介绍了学习sql语句的环境配置，主要使用windows+xampp进行一键环境搭建，用于学习sql基本语句已经完全够用。

@@ -2,10 +2,12 @@
 title: '[python]-lib-virtualenv'
 date: 2018-04-27 10:00:05
 tags:
-categories: PYTHON
+categories: python
 ---
 
 现在python有python2和python3两个版本，在windows上支持同时安装这两个版本的解释器，那么如何快速切换我们的开发环境呢。
+
+<!--more-->
 
 首先如果只是作为调试，我们可以使用py -2和py -3命令来进入python的版本。
 

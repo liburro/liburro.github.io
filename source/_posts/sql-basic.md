@@ -2,7 +2,7 @@
 title: '[SQL]-sql基础'
 date: 2018-04-25 14:44:47
 tags:
-categories: [DATABASE]
+categories: 数据库
 ---
 
 本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。
@@ -132,4 +132,10 @@ SELECT column1 FROM table_name WHERE column1=condition;
 SELECT * FROM table_name ORDER BY column1;
 SELECT * FROM table_name ORDER BY column1 DESC;
 SELECT column1, column2 FROM table_name GROUP BY column1 ORDER BY column2;
+```
+
+### LIKE
+
+``` sql
+SELECT * FROM table_name WHERE column1 LIKE 'auto%';
 ```
