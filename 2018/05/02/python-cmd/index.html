@@ -79,14 +79,19 @@
 
 
 
+<meta name="description" content="本文主要备注一些python好用的命令行。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[linux]-vim">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/linux-vim/index.html">
+<meta property="og:title" content="[python]-命令行">
+<meta property="og:url" content="http://yoursite.com/2018/05/02/python-cmd/index.html">
 <meta property="og:site_name" content="LiBurro">
+<meta property="og:description" content="本文主要备注一些python好用的命令行。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T10:33:06.003Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/02/python-cmd/cmd_error1.png">
+<meta property="og:updated_time" content="2018-05-02T02:23:36.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[linux]-vim">
+<meta name="twitter:title" content="[python]-命令行">
+<meta name="twitter:description" content="本文主要备注一些python好用的命令行。">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/02/python-cmd/cmd_error1.png">
 
 
 
@@ -116,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/26/linux-vim/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/02/python-cmd/"/>
 
 
 
 
 
-  <title>[linux]-vim | LiBurro</title>
+  <title>[python]-命令行 | LiBurro</title>
   
 
 
@@ -313,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/linux-vim/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/python-cmd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -330,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[linux]-vim</h1>
+          <h1 class="post-title" itemprop="name headline">[python]-命令行</h1>
         
 
         <div class="post-meta">
@@ -342,8 +347,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T16:31:52+08:00">
-                2018-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T10:20:18+08:00">
+                2018-05-02
               </time>
             
 
@@ -365,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -382,7 +387,7 @@
 
           
           
-             <span id="/2018/04/26/linux-vim/" class="leancloud_visitors" data-flag-title="[linux]-vim">
+             <span id="/2018/05/02/python-cmd/" class="leancloud_visitors" data-flag-title="[python]-命令行">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -413,7 +418,12 @@
       
 
       
-        <a id="more"></a>
+        <p>本文主要备注一些python好用的命令行。</p>
+<a id="more"></a>
+<h2 id="编译py文件"><a href="#编译py文件" class="headerlink" title="编译py文件"></a>编译py文件</h2><p>当有一个py文件不能直接运行，但是需要查看语法等是否有误，可以使用如下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m py_compile xx.py</span><br></pre></td></tr></table></figure>
+<p>如果没有报错，不会有回显，并且会在xx.py对应目录下生成xx.pyc文件，如果有错，类似下面的回显：</p>
+<p><img src="/2018/05/02/python-cmd/cmd_error1.png" alt="cmd_error1"></p>
 
       
     </div>
@@ -438,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/linux-view-file/" rel="next" title="[Linux]-文件查看操作">
-                <i class="fa fa-chevron-left"></i> [Linux]-文件查看操作
+              <a href="/2018/04/28/hexo-config/" rel="next" title="[HEXO]-使用hexo+github搭建blog">
+                <i class="fa fa-chevron-left"></i> [HEXO]-使用hexo+github搭建blog
               </a>
             
           </div>
@@ -448,8 +458,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/26/python-dict/" rel="prev" title="[python]-字典的使用">
-                [python]-字典的使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/02/python-configparser/" rel="prev" title="[python]-lib-ConfigParser">
+                [python]-lib-ConfigParser <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,8 +512,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -554,6 +573,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译py文件"><span class="nav-number">1.</span> <span class="nav-text">编译py文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
