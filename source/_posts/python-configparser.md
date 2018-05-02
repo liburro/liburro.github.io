@@ -78,3 +78,15 @@ mycp.items('section') #返回一个列表，每个元素是一个包含两个元
 ### 重复的情况
 
 __注意__：如果有section的内容相同，取最后一个section里面的内容，如果section里面有option相同，取最后一个option的值。
+
+### 读取的值大小写问题
+
+通过get等读取出来的值默认会被转换为小写，可以通过下面的方式屏蔽这个内容。
+
+``` python
+class YouClassName(ConfigParser):
+    def optionxform(self, optionstr):
+        return optionstr
+```
+
+通过继承ConfigParser并且重写optionxform函数，返回原始读取的内容。
