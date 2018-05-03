@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="本文主要讲解了 with as 语句的使用，就是python里面上下文管理器的一种概念(context manager)。">
+<meta name="description" content="表语是紧跟系动词之后的结构，一般称及物动词之后的结构为宾语，系动词之后的结构为表语。表语用来表述主语的身份，状态，特征等信息。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[python]-with as 语句">
-<meta property="og:url" content="http://yoursite.com/2018/05/02/python-withas/index.html">
+<meta property="og:title" content="[英语语法]-表语">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/en-predicative/index.html">
 <meta property="og:site_name" content="LiBurro">
-<meta property="og:description" content="本文主要讲解了 with as 语句的使用，就是python里面上下文管理器的一种概念(context manager)。">
+<meta property="og:description" content="表语是紧跟系动词之后的结构，一般称及物动词之后的结构为宾语，系动词之后的结构为表语。表语用来表述主语的身份，状态，特征等信息。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-02T05:29:18.580Z">
+<meta property="og:updated_time" content="2018-04-28T10:33:05.892Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[python]-with as 语句">
-<meta name="twitter:description" content="本文主要讲解了 with as 语句的使用，就是python里面上下文管理器的一种概念(context manager)。">
+<meta name="twitter:title" content="[英语语法]-表语">
+<meta name="twitter:description" content="表语是紧跟系动词之后的结构，一般称及物动词之后的结构为宾语，系动词之后的结构为表语。表语用来表述主语的身份，状态，特征等信息。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/02/python-withas/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/26/en-predicative/"/>
 
 
 
 
 
-  <title>[python]-with as 语句 | LiBurro</title>
+  <title>[英语语法]-表语 | LiBurro</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/python-withas/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/en-predicative/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[python]-with as 语句</h1>
+          <h1 class="post-title" itemprop="name headline">[英语语法]-表语</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T11:40:04+08:00">
-                2018-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T17:05:28+08:00">
+                2018-04-26
               </time>
             
 
@@ -368,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/english/" itemprop="url" rel="index">
+                    <span itemprop="name">英语</span>
                   </a>
                 </span>
 
@@ -385,7 +385,7 @@
 
           
           
-             <span id="/2018/05/02/python-withas/" class="leancloud_visitors" data-flag-title="[python]-with as 语句">
+             <span id="/2018/04/26/en-predicative/" class="leancloud_visitors" data-flag-title="[英语语法]-表语">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,22 +416,23 @@
       
 
       
-        <p>本文主要讲解了 with as 语句的使用，就是python里面上下文管理器的一种概念(context manager)。</p>
-<a id="more"></a>
-<p>官方链接：<br><a href="https://docs.python.org/2/reference/datamodel.html#context-managers" target="_blank" rel="noopener">https://docs.python.org/2/reference/datamodel.html#context-managers</a><br><a href="https://docs.python.org/2/reference/compound_stmts.html#the-with-statement" target="_blank" rel="noopener">https://docs.python.org/2/reference/compound_stmts.html#the-with-statement</a></p>
-<p>我们知道平时打开文件进行操作使用如下语句，可以在任何时候都关闭掉打开的文件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.do_something()</span><br></pre></td></tr></table></figure>
-<p>其实我们也可以创建自己的上下文管理器来完成相应的动作，在做完或者中间有异常的情况下，我们设定的代码都一定会执行。<br>我们只需要定义一个类，然后创建两个函数，格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">testwith</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span> <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, exc_type, exc_value, traceback)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'exit'</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'fun'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> testwith() <span class="keyword">as</span> p:</span><br><span class="line">    p.fun()</span><br></pre></td></tr></table></figure>
-<p>只要定义了<code>__enter__</code>和<code>__exit__</code>两个函数，那么就可以使用<code>with as</code>语句了，执行顺序如下：</p>
-<ol>
-<li>先执行<code>__init__</code></li>
-<li>执行<code>__enter__</code>，返回的对象赋值给<code>with as</code>语句as后面的变量</li>
-<li>执行<code>with as</code>的代码块(也就是执行p.fun())</li>
-<li>执行<code>__enter__</code>，这个函数必须是4个参数，<code>self</code>是固定的，<code>exc_type</code>是异常类型，<code>exc_value</code>是异常实例对象，<code>traceback</code>是异常跟踪对象，如果没有异常发生，后面三个参数都是<code>None</code>。</li>
+        <p>表语是紧跟系动词之后的结构，一般称及物动词之后的结构为宾语，系动词之后的结构为表语。<br>表语用来表述主语的身份，状态，特征等信息。<br><a id="more"></a><br>He looks good. look这里作为系动词，good是一个形容词，作为表语。</p>
+<p>常用的系动词有：</p>
+<blockquote>
+<p>am/is/are keep seem appear become feel get grow remain smell look sound stay taste</p>
+</blockquote>
+<p>大多数情况，系动词也具有及物动词的词性，请看下面的两个keep：</p>
+<h5 id="句1"><a href="#句1" class="headerlink" title="句1"></a>句1</h5><p>I <em>keep</em> silent in class.</p>
+<h5 id="句2"><a href="#句2" class="headerlink" title="句2"></a>句2</h5><p>I <em>keep</em> books in my room.</p>
+<h5 id="我们先看下系动词的两个特点"><a href="#我们先看下系动词的两个特点" class="headerlink" title="我们先看下系动词的两个特点"></a>我们先看下系动词的两个特点</h5><ol>
+<li><strong>系动词后可以跟名词和形容词</strong></li>
+<li><strong>系动词在替换为be动词之后，句子语义基本不变</strong></li>
 </ol>
-<p><strong>注意</strong>: 如果在未执行代码块(也就是p.fun())以前发生了任何异常，是不会执行<code>__exit__</code>的，也就是说<code>__init__</code>或者<code>__enter__</code>里面发生了异常，是不会执行到<code>__exit__</code>里面的</p>
-<p><strong>注意</strong>: 默认情况下<code>__exit__</code>返回的是<code>None</code>，这个时候，异常是会继续抛出的，如果想出现异常不抛出，这个函数需要显示的返回真值，比如<code>True</code>。</p>
+<p>请看：</p>
+<p>系动词之后接名词：<br>Adventure <em>becomes</em> a part of my life.<br>Pollution <em>remains</em> a troubling problem.</p>
+<p>系动词之后接形容词(一般及物动词不具有这个特性)：<br>She <em>looks</em> a little tired.<br>The shop <em>stays</em> open.</p>
+<p>系动词替换为be动词之后，语义基本不变：<br>Adventure <em>is</em> a part of my life.<br>She <em>was</em> a little tired.</p>
+<p>好，现在来看<a href="#句1">句1</a>和<a href="#句2">句2</a>的比较：<br>根据<a href="#我们先看下系动词的两个特点">系动词特点</a>1，可以发现<a href="#句1">句子1</a>中的<em>keep</em>肯定是系动词，应为silent是形容词，及物动词不具有这个特性。<br>那么根据<a href="#我们先看下系动词的两个特点">特点1</a>无法判断<a href="#句2">句子2</a>的<em>keep</em>属性，因为book是一个名词，系动词和及物动词都有这个特性，那么根据<a href="#我们先看下系动词的两个特点">特点2</a>进行判断，把<em>keep</em>替换为be动词查看语义是否变化：<br>I is books in my room.显然这个句子是有歧义的，那么就不是系动词，因为替换后的语义都变化了，所以这里也不能进行替换，那么<em>keep</em>就是一个及物动词。</p>
 
       
     </div>
@@ -456,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/py-lib-configparser/" rel="next" title="[python]-lib-ConfigParser">
-                <i class="fa fa-chevron-left"></i> [python]-lib-ConfigParser
+              <a href="/2018/04/26/py-dict/" rel="next" title="[python]-字典的使用">
+                <i class="fa fa-chevron-left"></i> [python]-字典的使用
               </a>
             
           </div>
@@ -466,8 +467,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/02/py-lib-str/" rel="prev" title="[python]-字符串操作">
-                [python]-字符串操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/26/rf-user-guide/" rel="prev" title="[robotframework]-指导说明">
+                [robotframework]-指导说明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -520,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -572,6 +582,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#句1"><span class="nav-number">1.</span> <span class="nav-text">句1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#句2"><span class="nav-number">2.</span> <span class="nav-text">句2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#我们先看下系动词的两个特点"><span class="nav-number">3.</span> <span class="nav-text">我们先看下系动词的两个特点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

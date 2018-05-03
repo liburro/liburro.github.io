@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
+<meta name="description" content="robotframework是一个自动化测试框架。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[SQL]-sql基础">
-<meta property="og:url" content="http://yoursite.com/2018/04/25/sql-basic/index.html">
+<meta property="og:title" content="[robotframework]-指导说明">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/rf-user-guide/index.html">
 <meta property="og:site_name" content="LiBurro">
-<meta property="og:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
+<meta property="og:description" content="robotframework是一个自动化测试框架。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T10:33:06.162Z">
+<meta property="og:updated_time" content="2018-05-02T02:39:57.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[SQL]-sql基础">
-<meta name="twitter:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
+<meta name="twitter:title" content="[robotframework]-指导说明">
+<meta name="twitter:description" content="robotframework是一个自动化测试框架。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/25/sql-basic/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/26/rf-user-guide/"/>
 
 
 
 
 
-  <title>[SQL]-sql基础 | LiBurro</title>
+  <title>[robotframework]-指导说明 | LiBurro</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/sql-basic/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/rf-user-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[SQL]-sql基础</h1>
+          <h1 class="post-title" itemprop="name headline">[robotframework]-指导说明</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T14:44:47+08:00">
-                2018-04-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T17:08:35+08:00">
+                2018-04-26
               </time>
             
 
@@ -368,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/database/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/robotframework/" itemprop="url" rel="index">
+                    <span itemprop="name">robotframework</span>
                   </a>
                 </span>
 
@@ -385,7 +385,7 @@
 
           
           
-             <span id="/2018/04/25/sql-basic/" class="leancloud_visitors" data-flag-title="[SQL]-sql基础">
+             <span id="/2018/04/26/rf-user-guide/" class="leancloud_visitors" data-flag-title="[robotframework]-指导说明">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,41 +416,33 @@
       
 
       
-        <p>本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。</p>
+        <p>robotframework是一个自动化测试框架。</p>
 <a id="more"></a>
-<p>参考链接:</p>
-<ul>
-<li><a href="http://www.w3school.com.cn/sql/" target="_blank" rel="noopener">http://www.w3school.com.cn/sql/</a></li>
-</ul>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><p>数据库是数据的容器，在做任何有关数据的操作时，都需要创建一个数据库。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] database_name;</span><br></pre></td></tr></table></figure>
-<p>注意 <code>IF NOT EXISTS</code>语句是可选的，这句话的意思是如果在服务器已经有了和当前需要创建的数据库同名的数据库，就不创建。</p>
-<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p>mysql等数据库，都是需要用表来存放数据的。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] table_name(</span><br><span class="line">    column_list</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>举例:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> test_table(</span><br><span class="line">    table_id <span class="built_in">INT</span> AUTO_INCREMENT, #设置一个列，取名叫table_id，数据类型为<span class="built_in">INT</span>，并且是自动增长的</span><br><span class="line">    title <span class="built_in">VARCHAR</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>, #创建title列，数据类型为<span class="built_in">VARCHAR</span>类型，最长<span class="number">10</span>，并且不为空</span><br><span class="line">    create_date <span class="built_in">DATE</span>, #创建create_date列，数据类型为<span class="built_in">DATE</span>，可以为空</span><br><span class="line">    usercount <span class="built_in">INT</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>, #创建usercount列，设置默认值为<span class="number">0</span></span><br><span class="line">    PRIMARY <span class="keyword">KEY</span> (table_id), #设置主键为table_id</span><br><span class="line">    <span class="keyword">UNIQUE</span> (title), #设置title必须唯一</span><br><span class="line">    <span class="keyword">CHECK</span> (usercount&gt;<span class="number">-1</span>), #设置usercount列的数据不能是负数</span><br><span class="line">    FOREGIN <span class="keyword">KEY</span> (another_id) <span class="keyword">REFERENCES</span> anoter_table(another_id), #设置another_id列，并且与anoter_table表的another_id关联</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>解释:</p>
-<blockquote>
-<p>主键的作用：确定了数据的唯一性，便于其它表的关联，配合索引提升数据查找性能<br>SQL约束：<code>NOT NULL</code>, <code>UNIQUE</code>, <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>DEFAULT</code>, <code>CHECK</code></p>
-</blockquote>
-<h3 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h3><p>基本语法:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
-<p>或者:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
-<h3 id="WHERE语句"><a href="#WHERE语句" class="headerlink" title="WHERE语句"></a>WHERE语句</h3><p>基本语法:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> cloumn_name=<span class="string">'condition'</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="INSERT语句"><a href="#INSERT语句" class="headerlink" title="INSERT语句"></a>INSERT语句</h3><p>基本语法:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 指定列名插入</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name(column1, column2) <span class="keyword">VALUES</span> (value1, value2);</span><br><span class="line"></span><br><span class="line"># 指定列名插入多条数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name(column1, column2) <span class="keyword">VALUES</span> (value1, value2), (value11, value22);</span><br><span class="line"></span><br><span class="line"># 如果插入全部数据，可以不指定列名，注意自动增加的字段可以不写</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name <span class="keyword">VALUES</span> (value1, value2);</span><br><span class="line"></span><br><span class="line"># 不指定列名插入多条数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name <span class="keyword">VALUES</span> (value1, value2), (value11, value22);</span><br></pre></td></tr></table></figure>
-<h3 id="UPDATE语句"><a href="#UPDATE语句" class="headerlink" title="UPDATE语句"></a>UPDATE语句</h3><p>基本语法:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table_name <span class="keyword">SET</span> column1 = new_value1, column2 = new_value2 <span class="keyword">WHERE</span> condition;</span><br></pre></td></tr></table></figure>
-<p>注意: SET后面是需要更新的列，指定多列，中间用英文的逗号分开，WHERE语句是可选的，如果没有这个语句，默认更新所有的行的数据。</p>
-<h3 id="DELETE语句"><a href="#DELETE语句" class="headerlink" title="DELETE语句"></a>DELETE语句</h3><p>基本语法:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> condition;</span><br></pre></td></tr></table></figure>
-<p>注意: 如果没有WHERE子句进行限制，默认删除所有的数据。</p>
-<h3 id="COUNT函数"><a href="#COUNT函数" class="headerlink" title="COUNT函数"></a>COUNT函数</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> table_name;</span><br><span class="line"><span class="keyword">SELECT</span> column1, <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> column2=condition;</span><br></pre></td></tr></table></figure>
-<h3 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column1 <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> column1=condition;</span><br></pre></td></tr></table></figure>
-<h3 id="ORDER-BY-DESC"><a href="#ORDER-BY-DESC" class="headerlink" title="ORDER BY(DESC)"></a>ORDER BY(DESC)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">ORDER</span> <span class="keyword">BY</span> column1;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">ORDER</span> <span class="keyword">BY</span> column1 <span class="keyword">DESC</span>;</span><br><span class="line"><span class="keyword">SELECT</span> column1, column2 <span class="keyword">FROM</span> table_name <span class="keyword">GROUP</span> <span class="keyword">BY</span> column1 <span class="keyword">ORDER</span> <span class="keyword">BY</span> column2;</span><br></pre></td></tr></table></figure>
-<h3 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> column1 <span class="keyword">LIKE</span> <span class="string">'auto%'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="基础实例"><a href="#基础实例" class="headerlink" title="基础实例"></a>基础实例</h2><h2 id="case的组织"><a href="#case的组织" class="headerlink" title="case的组织"></a>case的组织</h2><h2 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h2><h2 id="所有可用的设置"><a href="#所有可用的设置" class="headerlink" title="所有可用的设置"></a>所有可用的设置</h2><h2 id="内建库的常用函数"><a href="#内建库的常用函数" class="headerlink" title="内建库的常用函数"></a>内建库的常用函数</h2><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量的优先级和作用域"><a href="#变量的优先级和作用域" class="headerlink" title="变量的优先级和作用域"></a>变量的优先级和作用域</h3><p>根据定义变量的方式有不同的作用域和优先级。</p>
+<h4 id="变量的优先级-由高到底排序"><a href="#变量的优先级-由高到底排序" class="headerlink" title="变量的优先级(由高到底排序)"></a>变量的优先级(由高到底排序)</h4><p>内建变量 &gt; 执行测试设置的变量 &gt; 命令行 &gt; table表 &gt; resource或者variable文件引入</p>
+<ol>
+<li>内建变量，比如${TEMPDIR}拥有最高的优先级。</li>
+<li>测试过程中产生的变量，比如使用set test/suite/global variable keywords产生的变量，<strong>会覆盖已经存在的在当前作用域内的变量</strong>(也就是说，如果一个case的variable里面有一个变量，先于这个case运行的任何文件里面使用了set global variable这个keyword的话，这个变量会被替换为global的值)，虽然优先级较高，但是不会影响作用域外的变量。</li>
+<li>命令行变量，会覆盖variable table和资源文件里面的所有变量，命令行变量可以被设置多次，只有最后一个生效。</li>
+<li>table表变量，可用于定义这个变量的文件的任意位置，会覆盖资源文件引入的变量。</li>
+<li>资源文件变量，资源文件引入多个相同的变量，第一个引入的变量生效。</li>
+</ol>
+<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><ol>
+<li>全局作用域: 可以在全局任意一个地方可用，可以通过命令行和set global variable设置，当然也包括内建变量。</li>
+<li>测试套作用域: 可以在当前测试套种使用的，比如当前测试文件引入的，当前文件的variable table里面定义的，或者 set suite variable定义的。</li>
+<li>测试用例作用域: 可以在当前测试用例中使用，一般通过set test variable设置的。</li>
+<li>本地作用域: 比如keyword的参数，keyword获得的返回值等。<h2 id="keyword"><a href="#keyword" class="headerlink" title="keyword"></a>keyword</h2><h2 id="资源文件"><a href="#资源文件" class="headerlink" title="资源文件"></a>资源文件</h2><h2 id="用户自定义测试库"><a href="#用户自定义测试库" class="headerlink" title="用户自定义测试库"></a>用户自定义测试库</h2></li>
+</ol>
+<h3 id="自定义测试lib接受列表"><a href="#自定义测试lib接受列表" class="headerlink" title="自定义测试lib接受列表"></a>自定义测试lib接受列表</h3><p>假如用python定义了一个自己的keyword，并且接受列表，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_lib</span><span class="params">(*this_is_list)</span>:</span></span><br></pre></td></tr></table></figure>
+<p>那么在robotframework中需要使用如下格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_lib  a  b  c d</span><br></pre></td></tr></table></figure>
+<p>注意参数空格，a和b都是前后两个空格，c和d之间只有一个空格，那么参数类似于：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c d'</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="内部API"><a href="#内部API" class="headerlink" title="内部API"></a>内部API</h2><p>robotframework提供了很多内部api，这个是可以使用python获取java直接调用的函数。下面介绍一些常用的。<br>文档：<a href="http://robot-framework.readthedocs.io/en/v3.0.4/" target="_blank" rel="noopener">http://robot-framework.readthedocs.io/en/v3.0.4/</a></p>
+<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>在<code>robot.api</code>这个包下的<code>logger</code>模块，如果要使用，需要引入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> robot.api <span class="keyword">import</span> logger</span><br></pre></td></tr></table></figure>
+<p><code>logger</code>模块有几个函数，<code>write</code>, <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>console</code>，所有函数的第一个参数都是你想打印的信息，注意<code>console</code>只会打印到命令行里面，日志里面没有，<code>info</code>默认不会显示到命令行，但是有一个<code>also_console</code>参数，设置为<code>true</code>，即可以打印到控制台，也可以输出到日志。</p>
+<p>具体参见：<a href="http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger" target="_blank" rel="noopener">http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger</a></p>
 
       
     </div>
@@ -475,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/26/en-predicative/" rel="next" title="[英语语法]-表语">
+                <i class="fa fa-chevron-left"></i> [英语语法]-表语
               </a>
             
           </div>
@@ -485,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/26/linux-view-file/" rel="prev" title="[Linux]-文件查看操作">
-                [Linux]-文件查看操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/26/db-mysql-config/" rel="prev" title="[mysql]-mysql学习环境搭建">
+                [mysql]-mysql学习环境搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -554,7 +546,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Burro</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Every day.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -564,7 +556,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -575,7 +567,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -610,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.2.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SELECT语句"><span class="nav-number">1.3.</span> <span class="nav-text">SELECT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WHERE语句"><span class="nav-number">1.4.</span> <span class="nav-text">WHERE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INSERT语句"><span class="nav-number">1.5.</span> <span class="nav-text">INSERT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UPDATE语句"><span class="nav-number">1.6.</span> <span class="nav-text">UPDATE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DELETE语句"><span class="nav-number">1.7.</span> <span class="nav-text">DELETE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT函数"><span class="nav-number">1.8.</span> <span class="nav-text">COUNT函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">1.9.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ORDER-BY-DESC"><span class="nav-number">1.10.</span> <span class="nav-text">ORDER BY(DESC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIKE"><span class="nav-number">1.11.</span> <span class="nav-text">LIKE</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础实例"><span class="nav-number">1.</span> <span class="nav-text">基础实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case的组织"><span class="nav-number">2.</span> <span class="nav-text">case的组织</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">3.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有可用的设置"><span class="nav-number">4.</span> <span class="nav-text">所有可用的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内建库的常用函数"><span class="nav-number">5.</span> <span class="nav-text">内建库的常用函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">6.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的优先级和作用域"><span class="nav-number">6.1.</span> <span class="nav-text">变量的优先级和作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的优先级-由高到底排序"><span class="nav-number">6.1.1.</span> <span class="nav-text">变量的优先级(由高到底排序)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">6.1.2.</span> <span class="nav-text">变量的作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keyword"><span class="nav-number">7.</span> <span class="nav-text">keyword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源文件"><span class="nav-number">8.</span> <span class="nav-text">资源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义测试库"><span class="nav-number">9.</span> <span class="nav-text">用户自定义测试库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义测试lib接受列表"><span class="nav-number">9.1.</span> <span class="nav-text">自定义测试lib接受列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部API"><span class="nav-number">10.</span> <span class="nav-text">内部API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number">10.1.</span> <span class="nav-text">日志</span></a></li></ol></li></ol></div>
             
 
           </div>

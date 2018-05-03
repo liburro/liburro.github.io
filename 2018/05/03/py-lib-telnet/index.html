@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="robotframework是一个自动化测试框架。">
+<meta name="description" content="本文记录了python通过telnet链接设备的是使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[robotframework]-指导说明">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/robotframework-user-guide/index.html">
+<meta property="og:title" content="[python]-lib-telnet">
+<meta property="og:url" content="http://yoursite.com/2018/05/03/py-lib-telnet/index.html">
 <meta property="og:site_name" content="LiBurro">
-<meta property="og:description" content="robotframework是一个自动化测试框架。">
+<meta property="og:description" content="本文记录了python通过telnet链接设备的是使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-02T02:39:57.144Z">
+<meta property="og:updated_time" content="2018-05-03T08:17:42.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[robotframework]-指导说明">
-<meta name="twitter:description" content="robotframework是一个自动化测试框架。">
+<meta name="twitter:title" content="[python]-lib-telnet">
+<meta name="twitter:description" content="本文记录了python通过telnet链接设备的是使用。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/26/robotframework-user-guide/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/03/py-lib-telnet/"/>
 
 
 
 
 
-  <title>[robotframework]-指导说明 | LiBurro</title>
+  <title>[python]-lib-telnet | LiBurro</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/robotframework-user-guide/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/03/py-lib-telnet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[robotframework]-指导说明</h1>
+          <h1 class="post-title" itemprop="name headline">[python]-lib-telnet</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T17:08:35+08:00">
-                2018-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T15:49:11+08:00">
+                2018-05-03
               </time>
             
 
@@ -368,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/robotframework/" itemprop="url" rel="index">
-                    <span itemprop="name">robotframework</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -385,7 +385,7 @@
 
           
           
-             <span id="/2018/04/26/robotframework-user-guide/" class="leancloud_visitors" data-flag-title="[robotframework]-指导说明">
+             <span id="/2018/05/03/py-lib-telnet/" class="leancloud_visitors" data-flag-title="[python]-lib-telnet">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,33 +416,9 @@
       
 
       
-        <p>robotframework是一个自动化测试框架。</p>
+        <p>本文记录了python通过telnet链接设备的是使用。</p>
 <a id="more"></a>
-<h2 id="基础实例"><a href="#基础实例" class="headerlink" title="基础实例"></a>基础实例</h2><h2 id="case的组织"><a href="#case的组织" class="headerlink" title="case的组织"></a>case的组织</h2><h2 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h2><h2 id="所有可用的设置"><a href="#所有可用的设置" class="headerlink" title="所有可用的设置"></a>所有可用的设置</h2><h2 id="内建库的常用函数"><a href="#内建库的常用函数" class="headerlink" title="内建库的常用函数"></a>内建库的常用函数</h2><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量的优先级和作用域"><a href="#变量的优先级和作用域" class="headerlink" title="变量的优先级和作用域"></a>变量的优先级和作用域</h3><p>根据定义变量的方式有不同的作用域和优先级。</p>
-<h4 id="变量的优先级-由高到底排序"><a href="#变量的优先级-由高到底排序" class="headerlink" title="变量的优先级(由高到底排序)"></a>变量的优先级(由高到底排序)</h4><p>内建变量 &gt; 执行测试设置的变量 &gt; 命令行 &gt; table表 &gt; resource或者variable文件引入</p>
-<ol>
-<li>内建变量，比如${TEMPDIR}拥有最高的优先级。</li>
-<li>测试过程中产生的变量，比如使用set test/suite/global variable keywords产生的变量，<strong>会覆盖已经存在的在当前作用域内的变量</strong>(也就是说，如果一个case的variable里面有一个变量，先于这个case运行的任何文件里面使用了set global variable这个keyword的话，这个变量会被替换为global的值)，虽然优先级较高，但是不会影响作用域外的变量。</li>
-<li>命令行变量，会覆盖variable table和资源文件里面的所有变量，命令行变量可以被设置多次，只有最后一个生效。</li>
-<li>table表变量，可用于定义这个变量的文件的任意位置，会覆盖资源文件引入的变量。</li>
-<li>资源文件变量，资源文件引入多个相同的变量，第一个引入的变量生效。</li>
-</ol>
-<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><ol>
-<li>全局作用域: 可以在全局任意一个地方可用，可以通过命令行和set global variable设置，当然也包括内建变量。</li>
-<li>测试套作用域: 可以在当前测试套种使用的，比如当前测试文件引入的，当前文件的variable table里面定义的，或者 set suite variable定义的。</li>
-<li>测试用例作用域: 可以在当前测试用例中使用，一般通过set test variable设置的。</li>
-<li>本地作用域: 比如keyword的参数，keyword获得的返回值等。<h2 id="keyword"><a href="#keyword" class="headerlink" title="keyword"></a>keyword</h2><h2 id="资源文件"><a href="#资源文件" class="headerlink" title="资源文件"></a>资源文件</h2><h2 id="用户自定义测试库"><a href="#用户自定义测试库" class="headerlink" title="用户自定义测试库"></a>用户自定义测试库</h2></li>
-</ol>
-<h3 id="自定义测试lib接受列表"><a href="#自定义测试lib接受列表" class="headerlink" title="自定义测试lib接受列表"></a>自定义测试lib接受列表</h3><p>假如用python定义了一个自己的keyword，并且接受列表，比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_lib</span><span class="params">(*this_is_list)</span>:</span></span><br></pre></td></tr></table></figure>
-<p>那么在robotframework中需要使用如下格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_lib  a  b  c d</span><br></pre></td></tr></table></figure>
-<p>注意参数空格，a和b都是前后两个空格，c和d之间只有一个空格，那么参数类似于：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c d'</span>]</span><br></pre></td></tr></table></figure></p>
-<h2 id="内部API"><a href="#内部API" class="headerlink" title="内部API"></a>内部API</h2><p>robotframework提供了很多内部api，这个是可以使用python获取java直接调用的函数。下面介绍一些常用的。<br>文档：<a href="http://robot-framework.readthedocs.io/en/v3.0.4/" target="_blank" rel="noopener">http://robot-framework.readthedocs.io/en/v3.0.4/</a></p>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>在<code>robot.api</code>这个包下的<code>logger</code>模块，如果要使用，需要引入：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> robot.api <span class="keyword">import</span> logger</span><br></pre></td></tr></table></figure>
-<p><code>logger</code>模块有几个函数，<code>write</code>, <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>console</code>，所有函数的第一个参数都是你想打印的信息，注意<code>console</code>只会打印到命令行里面，日志里面没有，<code>info</code>默认不会显示到命令行，但是有一个<code>also_console</code>参数，设置为<code>true</code>，即可以打印到控制台，也可以输出到日志。</p>
-<p>具体参见：<a href="http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger" target="_blank" rel="noopener">http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> telnetlib <span class="keyword">import</span> Telnet</span><br><span class="line"></span><br><span class="line">tel = Telnet(<span class="string">'your_ipaddr'</span>)</span><br><span class="line">tel.read_until(<span class="string">'expected str'</span>, timeout) <span class="comment">#这里返回读取到的回显</span></span><br><span class="line">tel.write(<span class="string">'something'</span> + self.cr)</span><br><span class="line">tel.expect([<span class="string">'es1'</span>, <span class="string">'es2'</span>, <span class="string">'\d+'</span>], timeout) <span class="comment">#这里第一个参数必须是列表，里面内容可以是正则表达式，返回3个元素的元组，最后一个是读取到的内容</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -467,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/english-predicative/" rel="next" title="[英语语法]-表语">
-                <i class="fa fa-chevron-left"></i> [英语语法]-表语
+              <a href="/2018/05/03/py-lib-time/" rel="next" title="[python]-lib-时间处理">
+                <i class="fa fa-chevron-left"></i> [python]-lib-时间处理
               </a>
             
           </div>
@@ -477,8 +453,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/26/mysql-config/" rel="prev" title="[mysql]-mysql学习环境搭建">
-                [mysql]-mysql学习环境搭建 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/03/spider-scrapy/" rel="prev" title="[爬虫]-scrapy">
+                [爬虫]-scrapy <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -531,22 +507,13 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Burro</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Every day.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -556,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -567,7 +534,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -592,22 +559,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础实例"><span class="nav-number">1.</span> <span class="nav-text">基础实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case的组织"><span class="nav-number">2.</span> <span class="nav-text">case的组织</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">3.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有可用的设置"><span class="nav-number">4.</span> <span class="nav-text">所有可用的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内建库的常用函数"><span class="nav-number">5.</span> <span class="nav-text">内建库的常用函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">6.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的优先级和作用域"><span class="nav-number">6.1.</span> <span class="nav-text">变量的优先级和作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的优先级-由高到底排序"><span class="nav-number">6.1.1.</span> <span class="nav-text">变量的优先级(由高到底排序)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">6.1.2.</span> <span class="nav-text">变量的作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keyword"><span class="nav-number">7.</span> <span class="nav-text">keyword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源文件"><span class="nav-number">8.</span> <span class="nav-text">资源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义测试库"><span class="nav-number">9.</span> <span class="nav-text">用户自定义测试库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义测试lib接受列表"><span class="nav-number">9.1.</span> <span class="nav-text">自定义测试lib接受列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部API"><span class="nav-number">10.</span> <span class="nav-text">内部API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number">10.1.</span> <span class="nav-text">日志</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
