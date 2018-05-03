@@ -19,4 +19,4 @@ py -m py_compile xx.py
 
 如果没有报错，不会有回显，并且会在xx.py对应目录下生成xx.pyc文件，如果有错，类似下面的回显：
 
-![cmd_error1](python-cmd/cmd_error1.png)
+![cmd_error1](py-cmd/cmd_error1.png)

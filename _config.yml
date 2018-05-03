@@ -5,7 +5,7 @@
 # Site
 title: LiBurro
 subtitle:
-description:
+description: Every day.
 keywords:
 author: Burro
 language: zh-Hans
@@ -59,6 +59,7 @@ category_map:
   英语: english
   数据库: database
   工具: tools
+  爬虫: spider
   
 tag_map:
 

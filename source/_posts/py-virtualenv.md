@@ -11,11 +11,11 @@ categories: python
 
 首先如果只是作为调试，我们可以使用py -2和py -3命令来进入python的版本。
 
-![py2-py3-console](python-virtualenv/py2-py3-console.png)
+![py2-py3-console](py-virtualenv/py2-py3-console.png)
 
 同理，pip也支持：
 
-![pip-console](python-virtualenv/pip-console.png)
+![pip-console](py-virtualenv/pip-console.png)
 
 下面说一下virtualenv这个工具的使用，看下面的实例：
 
@@ -29,21 +29,21 @@ D:\Program Files>virtualenv -p "D:\Program Files\Python3\python.exe" py3
 
 里面内容类似：
 
-![py3-virtual](python-virtualenv/py3-virtual.png)
+![py3-virtual](py-virtualenv/py3-virtual.png)
 
 我们进入scripts目录下执行active.bat：
 
-![py3-active](python-virtualenv/py3-active.png)
+![py3-active](py-virtualenv/py3-active.png)
 
 可以看见直接使用的是python命令，并且进入了python3的环境。注意上面的实际配置路径需要根据你自己机器上的路径配置。
 
 virtualenv工具的作用就是创建一个独立的python开发环境，这里面的所有环境都是独立的，不会影响你原来的环境等信息(当然可以认为的修改)。
 
 我们来看一下pip的使用：
-![pip-virtual](python-virtualenv/pip-virtual1.png)
-![pip-virtual](python-virtualenv/pip-virtual2.png)
-![pip-virtual](python-virtualenv/pip-virtual3.png)
-![pip-virtual](python-virtualenv/pip-virtual4.png)
+![pip-virtual](py-virtualenv/pip-virtual1.png)
+![pip-virtual](py-virtualenv/pip-virtual2.png)
+![pip-virtual](py-virtualenv/pip-virtual3.png)
+![pip-virtual](py-virtualenv/pip-virtual4.png)
 
 红色区域1：在虚拟环境下进入python，引入一个click库，由于没有安装，所以引入失败
 红色区域2：我们在虚拟环境下使用pip install click安装了click这个库，再次引入，成功了

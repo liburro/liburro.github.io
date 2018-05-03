@@ -15,15 +15,15 @@ categories: 数据库
 
 下载好xampp以后，全部默认点击下一步就可以安装完成，默认一般安装在c:\xampp这个位置，桌面也会生成xampp的快捷方式，打开后类似如下界面：
 
-![xampp-startup](mysql-config/xampp-startup.png)
+![xampp-startup](db-mysql-config/xampp-startup.png)
 
 分别把Apache和MySQL启动起来，其它的不在本文讨论范围，启动后类似界面如下：
 
-![xampp-mysql](mysql-config/xampp-mysql.png)
+![xampp-mysql](db-mysql-config/xampp-mysql.png)
 
 点击MySQL的Admin，将会打开一个浏览器窗口，类似如下界面：
 
-![xampp-phpmyadmin](mysql-config/xampp-phpmyadmin.png)
+![xampp-phpmyadmin](db-mysql-config/xampp-phpmyadmin.png)
 
 其中红色框内的几个区域说明如下：
 区域1：表示当前mysql数据库里面有哪些数据库

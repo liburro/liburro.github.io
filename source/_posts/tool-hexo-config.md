@@ -1,5 +1,5 @@
 ---
-title: '[HEXO]-使用hexo+github搭建blog'
+title: '[hexo]-使用hexo+github搭建blog'
 date: 2018-04-28 16:36:36
 tags:
 categories: 工具
@@ -15,23 +15,23 @@ categories: 工具
 
 下载好node.js后安装完成后，输入如下命令表示成功：
 
-![nodejs](hexo-config/nodejs.png)
+![nodejs](tool-hexo-config/nodejs.png)
 
 ## git安装
 
 下载好[git](https://git-scm.com/)，安装完成后，输入如下命令表示成功：
 
-![git](hexo-config/git.png)
+![git](tool-hexo-config/git.png)
 
 如果命令失败，需要把git安装目录下的bin目录加入到环境变量里面，比如我的是："c:/Program Files/Git/bin"，这个目录下有如下几个文件
 
-![git](hexo-config/git-bin.png)
+![git](tool-hexo-config/git-bin.png)
 
 ## github配置
 
 进入[github](https://github.com/)注册一个账号，并且创建一个repository，注意名字必须是username.github.io格式，username是你注册的用户名。
 
-![gitbug](hexo-config/github-repository.png)
+![gitbug](tool-hexo-config/github-repository.png)
 
 可以通过https://username.github.io/的方式访问你的首页了。
 
@@ -45,7 +45,7 @@ npm install hexo -g
 
 输入下面的命令，表示安装成功：
 
-![hexo-version](hexo-config/hexo-version.png)
+![hexo-version](tool-hexo-config/hexo-version.png)
 
 然后使用下面命令初始化hexo
 
@@ -71,7 +71,7 @@ hexo g
 hexo s
 ```
 
-![hexo-server](hexo-config/hexo-server.png)
+![hexo-server](tool-hexo-config/hexo-server.png)
 
 根据提示访问这个网页，如果打不开，使用下面的命令修改端口号
 
@@ -93,7 +93,7 @@ hexo clean
 
 打开页面后出现下面的界面表示配置成功
 
-![hexo-succ](hexo-config/hexo-succ.png)
+![hexo-succ](tool-hexo-config/hexo-succ.png)
 
 ## hexo与github关联
 
