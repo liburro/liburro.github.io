@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="robotframework是一个自动化测试框架。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-04T02:55:38.222Z">
+<meta property="og:updated_time" content="2018-05-07T08:41:15.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[robotframework]-指导说明">
 <meta name="twitter:description" content="robotframework是一个自动化测试框架。">
@@ -425,7 +425,12 @@
 <p>${var1} 会根据指定的条件获取到指定的值</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$&#123;var2&#125;</span>  run keyword <span class="keyword">if</span>  condition  Keyword</span><br></pre></td></tr></table></figure>
 <p>${var2} 获取到Keyword的值如果条件成立，否则获取到 None。</p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量的优先级和作用域"><a href="#变量的优先级和作用域" class="headerlink" title="变量的优先级和作用域"></a>变量的优先级和作用域</h3><p>根据定义变量的方式有不同的作用域和优先级。</p>
+<h3 id="append-to-list"><a href="#append-to-list" class="headerlink" title="append to list"></a>append to list</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@&#123;testlist&#125;  Create List</span><br><span class="line">Append To List  <span class="variable">$&#123;testlist&#125;</span>  v1 v2 <span class="comment">#注意了，这里必须使用$&#123;&#125;格式的变量，不能使用@&#123;&#125;格式变量</span></span><br></pre></td></tr></table></figure>
+<p>当然这个keyword是在Collections这个内建库里面。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h3><p>robotframework里面的变量忽略大小写，下划线，以及空格，也就是说 <code>${var}  ${Var}  ${v_ar} ${v ar}</code>都是同一个变量，这个和keyword一样。</p>
+<p>robotfframework里面有一般变量，列表，字典几种类型，分别用 <code>$ @ &amp;</code>修饰，但是其实它们并没有太多影响使用，也就是说一个列表<code>@{var}</code>，可以表示为<code>${var}</code>。</p>
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>使用<code>@{var}</code>的格式表明是一个列表，<code>@{var}[0]</code>的方式访问第一个元素。</p>
+<h3 id="变量的优先级和作用域"><a href="#变量的优先级和作用域" class="headerlink" title="变量的优先级和作用域"></a>变量的优先级和作用域</h3><p>根据定义变量的方式有不同的作用域和优先级。</p>
 <h4 id="变量的优先级-由高到底排序"><a href="#变量的优先级-由高到底排序" class="headerlink" title="变量的优先级(由高到底排序)"></a>变量的优先级(由高到底排序)</h4><p>内建变量 &gt; 执行测试设置的变量 &gt; 命令行 &gt; table表 &gt; resource或者variable文件引入</p>
 <ol>
 <li>内建变量，比如${TEMPDIR}拥有最高的优先级。</li>
@@ -450,6 +455,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> robot.api <span class="keyword">import</span> logger</span><br></pre></td></tr></table></figure>
 <p><code>logger</code>模块有几个函数，<code>write</code>, <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>console</code>，所有函数的第一个参数都是你想打印的信息，注意<code>console</code>只会打印到命令行里面，日志里面没有，<code>info</code>默认不会显示到命令行，但是有一个<code>also_console</code>参数，设置为<code>true</code>，即可以打印到控制台，也可以输出到日志。</p>
 <p>具体参见：<a href="http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger" target="_blank" rel="noopener">http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger</a></p>
+<h2 id="直接调用python函数"><a href="#直接调用python函数" class="headerlink" title="直接调用python函数"></a>直接调用python函数</h2><h3 id="转码"><a href="#转码" class="headerlink" title="转码"></a>转码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&#123;ret.decode(<span class="string">'utf-8'</span>)&#125; <span class="comment"># 这里ret是任意一个字符串，通过直接调用decode函数可以进行解码操作</span></span><br><span class="line"><span class="comment">#同理</span></span><br><span class="line">$&#123;ret.lower()&#125; <span class="comment">#可以直接返回小写</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -474,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/en-predicative/" rel="next" title="[英语语法]-表语">
-                <i class="fa fa-chevron-left"></i> [英语语法]-表语
+              <a href="/2018/04/26/en-grammer/" rel="next" title="[英语语法]-英语语法简单入门">
+                <i class="fa fa-chevron-left"></i> [英语语法]-英语语法简单入门
               </a>
             
           </div>
@@ -563,7 +569,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -609,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础实例"><span class="nav-number">1.</span> <span class="nav-text">基础实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case的组织"><span class="nav-number">2.</span> <span class="nav-text">case的组织</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">3.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有可用的设置"><span class="nav-number">4.</span> <span class="nav-text">所有可用的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内建库的常用函数"><span class="nav-number">5.</span> <span class="nav-text">内建库的常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-and-return"><span class="nav-number">5.1.</span> <span class="nav-text">run keyword and return</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-and-return-if"><span class="nav-number">5.2.</span> <span class="nav-text">run keyword and return if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-if"><span class="nav-number">5.3.</span> <span class="nav-text">run keyword if</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">6.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的优先级和作用域"><span class="nav-number">6.1.</span> <span class="nav-text">变量的优先级和作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的优先级-由高到底排序"><span class="nav-number">6.1.1.</span> <span class="nav-text">变量的优先级(由高到底排序)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">6.1.2.</span> <span class="nav-text">变量的作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keyword"><span class="nav-number">7.</span> <span class="nav-text">keyword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源文件"><span class="nav-number">8.</span> <span class="nav-text">资源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义测试库"><span class="nav-number">9.</span> <span class="nav-text">用户自定义测试库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义测试lib接受列表"><span class="nav-number">9.1.</span> <span class="nav-text">自定义测试lib接受列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部API"><span class="nav-number">10.</span> <span class="nav-text">内部API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number">10.1.</span> <span class="nav-text">日志</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础实例"><span class="nav-number">1.</span> <span class="nav-text">基础实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case的组织"><span class="nav-number">2.</span> <span class="nav-text">case的组织</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">3.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有可用的设置"><span class="nav-number">4.</span> <span class="nav-text">所有可用的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内建库的常用函数"><span class="nav-number">5.</span> <span class="nav-text">内建库的常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-and-return"><span class="nav-number">5.1.</span> <span class="nav-text">run keyword and return</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-and-return-if"><span class="nav-number">5.2.</span> <span class="nav-text">run keyword and return if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#run-keyword-if"><span class="nav-number">5.3.</span> <span class="nav-text">run keyword if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#append-to-list"><span class="nav-number">5.4.</span> <span class="nav-text">append to list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">6.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型"><span class="nav-number">6.1.</span> <span class="nav-text">变量类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#列表"><span class="nav-number">6.1.1.</span> <span class="nav-text">列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的优先级和作用域"><span class="nav-number">6.2.</span> <span class="nav-text">变量的优先级和作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的优先级-由高到底排序"><span class="nav-number">6.2.1.</span> <span class="nav-text">变量的优先级(由高到底排序)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">6.2.2.</span> <span class="nav-text">变量的作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keyword"><span class="nav-number">7.</span> <span class="nav-text">keyword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源文件"><span class="nav-number">8.</span> <span class="nav-text">资源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义测试库"><span class="nav-number">9.</span> <span class="nav-text">用户自定义测试库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义测试lib接受列表"><span class="nav-number">9.1.</span> <span class="nav-text">自定义测试lib接受列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部API"><span class="nav-number">10.</span> <span class="nav-text">内部API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number">10.1.</span> <span class="nav-text">日志</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直接调用python函数"><span class="nav-number">11.</span> <span class="nav-text">直接调用python函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转码"><span class="nav-number">11.1.</span> <span class="nav-text">转码</span></a></li></ol></li></ol></div>
             
 
           </div>
