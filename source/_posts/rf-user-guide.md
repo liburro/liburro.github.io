@@ -44,8 +44,26 @@ ${var2}  run keyword if  condition  Keyword
 
 ${var2} 获取到Keyword的值如果条件成立，否则获取到 None。
 
+### append to list
+
+``` bash
+@{testlist}  Create List
+Append To List  ${testlist}  v1 v2 #注意了，这里必须使用${}格式的变量，不能使用@{}格式变量
+```
+
+当然这个keyword是在Collections这个内建库里面。
 
 ## 变量
+
+### 变量类型
+
+robotframework里面的变量忽略大小写，下划线，以及空格，也就是说 `${var}  ${Var}  ${v_ar} ${v ar}`都是同一个变量，这个和keyword一样。
+
+robotfframework里面有一般变量，列表，字典几种类型，分别用 `$ @ &`修饰，但是其实它们并没有太多影响使用，也就是说一个列表`@{var}`，可以表示为`${var}`。
+
+#### 列表
+
+使用`@{var}`的格式表明是一个列表，`@{var}[0]`的方式访问第一个元素。
 
 ### 变量的优先级和作用域
 
@@ -106,3 +124,13 @@ from robot.api import logger
 `logger`模块有几个函数，`write`, `trace`, `debug`, `info`, `warn`, `error`, `console`，所有函数的第一个参数都是你想打印的信息，注意`console`只会打印到命令行里面，日志里面没有，`info`默认不会显示到命令行，但是有一个`also_console`参数，设置为`true`，即可以打印到控制台，也可以输出到日志。
 
 具体参见：http://robot-framework.readthedocs.io/en/v3.0.4/autodoc/robot.api.html#module-robot.api.logger
+
+## 直接调用python函数
+
+### 转码
+
+``` python
+${ret.decode('utf-8')} # 这里ret是任意一个字符串，通过直接调用decode函数可以进行解码操作
+#同理
+${ret.lower()} #可以直接返回小写
+```
