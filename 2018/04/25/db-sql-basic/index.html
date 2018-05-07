@@ -80,13 +80,14 @@
 
 
 <meta name="description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
+<meta name="keywords" content="python, robot, robotframework, linux, english, coding, test, automation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[SQL]-sql基础">
 <meta property="og:url" content="http://yoursite.com/2018/04/25/db-sql-basic/index.html">
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T10:33:06.162Z">
+<meta property="og:updated_time" content="2018-05-04T08:31:07.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[SQL]-sql基础">
 <meta name="twitter:description" content="本文主要介绍了sql(Structured Query Language)语句的基本使用，主要使用mysql进行操作。桌面可视化工具可以使用HeidiSQL或者Navicat。">
@@ -437,6 +438,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
 <p>或者:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+<h3 id="DISTINCT"><a href="#DISTINCT" class="headerlink" title="DISTINCT"></a>DISTINCT</h3><p>有时候我们选取的数据有重复的情况，但是我们只想让它只显示一次。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> column1 <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
 <h3 id="WHERE语句"><a href="#WHERE语句" class="headerlink" title="WHERE语句"></a>WHERE语句</h3><p>基本语法:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> cloumn_name=<span class="string">'condition'</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="INSERT语句"><a href="#INSERT语句" class="headerlink" title="INSERT语句"></a>INSERT语句</h3><p>基本语法:</p>
@@ -554,7 +557,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Burro</p>
-              <p class="site-description motion-element" itemprop="description">Every day.</p>
+              <p class="site-description motion-element" itemprop="description">记录个人工作和学习笔记，便于后期查询与备忘</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -564,7 +567,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.2.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SELECT语句"><span class="nav-number">1.3.</span> <span class="nav-text">SELECT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WHERE语句"><span class="nav-number">1.4.</span> <span class="nav-text">WHERE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INSERT语句"><span class="nav-number">1.5.</span> <span class="nav-text">INSERT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UPDATE语句"><span class="nav-number">1.6.</span> <span class="nav-text">UPDATE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DELETE语句"><span class="nav-number">1.7.</span> <span class="nav-text">DELETE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT函数"><span class="nav-number">1.8.</span> <span class="nav-text">COUNT函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">1.9.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ORDER-BY-DESC"><span class="nav-number">1.10.</span> <span class="nav-text">ORDER BY(DESC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIKE"><span class="nav-number">1.11.</span> <span class="nav-text">LIKE</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.2.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SELECT语句"><span class="nav-number">1.3.</span> <span class="nav-text">SELECT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DISTINCT"><span class="nav-number">1.4.</span> <span class="nav-text">DISTINCT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WHERE语句"><span class="nav-number">1.5.</span> <span class="nav-text">WHERE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INSERT语句"><span class="nav-number">1.6.</span> <span class="nav-text">INSERT语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UPDATE语句"><span class="nav-number">1.7.</span> <span class="nav-text">UPDATE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DELETE语句"><span class="nav-number">1.8.</span> <span class="nav-text">DELETE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT函数"><span class="nav-number">1.9.</span> <span class="nav-text">COUNT函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">1.10.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ORDER-BY-DESC"><span class="nav-number">1.11.</span> <span class="nav-text">ORDER BY(DESC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIKE"><span class="nav-number">1.12.</span> <span class="nav-text">LIKE</span></a></li></ol></li></ol></div>
             
 
           </div>

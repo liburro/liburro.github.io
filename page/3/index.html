@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="本文主要讲解一下python字符串的相关操作，包括string库的一些实用。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[python]-字符串操作">
-<meta property="og:url" content="http://yoursite.com/2018/05/02/py-str/index.html">
+<meta name="description" content="记录个人工作和学习笔记，便于后期查询与备忘">
+<meta name="keywords" content="python, robot, robotframework, linux, english, coding, test, automation">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LiBurro">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="LiBurro">
-<meta property="og:description" content="本文主要讲解一下python字符串的相关操作，包括string库的一些实用。">
+<meta property="og:description" content="记录个人工作和学习笔记，便于后期查询与备忘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-02T06:24:36.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[python]-字符串操作">
-<meta name="twitter:description" content="本文主要讲解一下python字符串的相关操作，包括string库的一些实用。">
+<meta name="twitter:title" content="LiBurro">
+<meta name="twitter:description" content="记录个人工作和学习笔记，便于后期查询与备忘">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/02/py-str/"/>
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
 
 
 
 
 
-  <title>[python]-字符串操作 | LiBurro</title>
+  <title>LiBurro</title>
   
 
 
@@ -144,7 +144,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,9 +302,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -316,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/py-str/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -333,7 +334,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[python]-字符串操作</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/26/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -345,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T14:04:16+08:00">
-                2018-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T16:36:36+08:00">
+                2017-04-26
               </time>
             
 
@@ -368,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">markdown</span>
                   </a>
                 </span>
 
@@ -385,7 +388,7 @@
 
           
           
-             <span id="/2018/05/02/py-str/" class="leancloud_visitors" data-flag-title="[python]-字符串操作">
+             <span id="/2017/04/26/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,20 +419,16 @@
       
 
       
-        <p>本文主要讲解一下python字符串的相关操作，包括string库的一些实用。</p>
-<a id="more"></a>
-<h2 id="常量字符串的操作"><a href="#常量字符串的操作" class="headerlink" title="常量字符串的操作"></a>常量字符串的操作</h2><p>常量字符串，就是我们定义的一个字符串，它们是一个常量，也就是不可改变的。</p>
-<p>比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var = <span class="string">"test_str"</span></span><br></pre></td></tr></table></figure>
-<p>这里把常量字符串<code>test_str</code>赋值给了变量<code>var</code>，其中<code>test_str</code>这是一个不可改变的，<code>var</code>只是一个变量，可以被重新赋值。</p>
-<h3 id="strip"><a href="#strip" class="headerlink" title="strip"></a>strip</h3><p><a href="https://docs.python.org/2/library/stdtypes.html#str.strip" target="_blank" rel="noopener">https://docs.python.org/2/library/stdtypes.html#str.strip</a><br><a href="https://docs.python.org/2/library/string.html#string.strip" target="_blank" rel="noopener">https://docs.python.org/2/library/string.html#string.strip</a></p>
-<p>涉及到3个函数，<code>strip</code>, <code>lstrip</code>, <code>rstrip</code>，同理string库里面也有这3个函数，<code>strip</code>是复制当前字符串，把当前字符串的前后的特定的字符给去掉后返回一个新的字符串，默认去掉的字符是空格。<code>lstrip</code>是去掉左边特定的字符，<code>rstrip</code>是去掉右边的特定字符。<br>需要去掉的字符可以是多个，当遇到第一个不是去掉的字符的时候停止，比如’testxxxtest’要去掉里面的”test”几个字符，<code>strip</code>函数会匹配第一个t发现在去掉的字符中，e s t几个也在，所以都去掉，遇到了x不在test中则停止。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">" test "</span>.strip() <span class="comment">#这里返回test</span></span><br><span class="line"><span class="string">"test"</span>.strip(<span class="string">'t'</span>) <span class="comment">#这里返回es</span></span><br><span class="line"><span class="string">"testxxxtest"</span>.strip(<span class="string">"test"</span>) <span class="comment">#这里返回xxx</span></span><br><span class="line"><span class="string">"mississippi"</span>.rstrip(<span class="string">"ipz"</span>) <span class="comment">#返回mississ</span></span><br><span class="line"><span class="string">"www.example.com"</span>.lstrip(<span class="string">"cmowz."</span>) <span class="comment">#返回example.com</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line">string.strip(<span class="string">" test "</span>) <span class="comment">#返回test，其它几个使用类似</span></span><br></pre></td></tr></table></figure>
-<h3 id="split"><a href="#split" class="headerlink" title="split"></a>split</h3><p><a href="https://docs.python.org/2/library/stdtypes.html#str.split" target="_blank" rel="noopener">https://docs.python.org/2/library/stdtypes.html#str.split</a><br><a href="https://docs.python.org/2/library/string.html#string.split" target="_blank" rel="noopener">https://docs.python.org/2/library/string.html#string.split</a></p>
-<p>这个函数是用于分割字符串，按照指定的字符把字符串分割，返回一个分割后的列表，同理也有<code>lsplit</code>和<code>rsplit</code>函数，同理string库里面也有相同的函数可以操作。</p>
-<p>默认的分隔符是空格。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"1 2 3 4"</span>.split() <span class="comment">#返回['1', '2', '3', '4']</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line">string.split(<span class="string">"1 2 3 4"</span>) <span class="comment">#返回['1', '2', '3', '4']</span></span><br></pre></td></tr></table></figure>
-
+        
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/26/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -446,28 +445,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/02/python-withas/" rel="next" title="[python]-with as 语句">
-                <i class="fa fa-chevron-left"></i> [python]-with as 语句
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -477,11 +460,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
@@ -489,10 +475,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -513,22 +495,13 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Burro</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">记录个人工作和学习笔记，便于后期查询与备忘</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -538,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -549,7 +522,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -574,22 +547,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常量字符串的操作"><span class="nav-number">1.</span> <span class="nav-text">常量字符串的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#strip"><span class="nav-number">1.1.</span> <span class="nav-text">strip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split"><span class="nav-number">1.2.</span> <span class="nav-text">split</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -730,10 +687,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
