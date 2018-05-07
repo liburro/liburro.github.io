@@ -5,8 +5,8 @@
 # Site
 title: LiBurro
 subtitle:
-description: Every day.
-keywords:
+description: 记录个人工作和学习笔记，便于后期查询与备忘
+keywords: python, robot, robotframework, linux, english, coding, test, automation
 author: Burro
 language: zh-Hans
 timezone: Asia/Shanghai

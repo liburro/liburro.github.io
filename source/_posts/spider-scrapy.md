@@ -30,3 +30,4 @@ scrapy startproject firstspider #这里的firstspider是你的项目名
 ## 参考链接
 
 http://python.jobbole.com/86405/
+http://python.jobbole.com/89122/

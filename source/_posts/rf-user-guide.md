@@ -15,6 +15,36 @@ robotframework是一个自动化测试框架。
 
 ## 所有可用的设置
 ## 内建库的常用函数
+
+### run keyword and return
+
+``` bash
+run keyword and return  My Keyword  arg1 arg2 #会运行My Keyword并且返回My Keyword的返回值
+```
+
+### run keyword and return if
+
+``` bash
+run keyword and return if  ${rc} > 0  My Keyword  arg1  arg2 #当满足条件的时候运行My Keyword并且返回这个的返回值
+```
+
+### run keyword if
+
+``` bash
+${var1} =  run keyword if  ${rc} == 0  Keyword1
+...  ELSE IF  0 < ${rc} < 42  Keyword2
+...  ELSE  ${rc}
+```
+
+${var1} 会根据指定的条件获取到指定的值
+
+``` bash
+${var2}  run keyword if  condition  Keyword
+```
+
+${var2} 获取到Keyword的值如果条件成立，否则获取到 None。
+
+
 ## 变量
 
 ### 变量的优先级和作用域

@@ -67,6 +67,15 @@ SELECT column_name FROM table_name;
 ```sql
 SELECT * FROM table_name;
 ```
+
+### DISTINCT
+
+有时候我们选取的数据有重复的情况，但是我们只想让它只显示一次。
+
+``` sql
+SELECT DISTINCT column1 FROM table_name;
+```
+
 ### WHERE语句
 
 基本语法:
