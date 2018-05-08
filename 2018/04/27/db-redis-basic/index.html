@@ -87,10 +87,16 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T10:33:05.888Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/db-redis-basic/count.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/db-redis-basic/hash.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/db-redis-basic/list.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/db-redis-basic/str.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/db-redis-basic/namespace.png">
+<meta property="og:updated_time" content="2018-05-08T09:59:11.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[redis]-基本操作">
 <meta name="twitter:description" content="Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库。">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/27/db-redis-basic/count.png">
 
 
 
@@ -421,6 +427,13 @@
 <a id="more"></a>
 <p>桌面可视化工具可以使用 Redis Desktop Manager进行操作。</p>
 <p>redis默认有db0 - db15 一共16个数据库。</p>
+<p><img src="/2018/04/27/db-redis-basic/count.png" alt="count"></p>
+<h2 id="hash类型"><a href="#hash类型" class="headerlink" title="hash类型"></a>hash类型</h2><p><img src="/2018/04/27/db-redis-basic/hash.png" alt="count"></p>
+<h2 id="list类型"><a href="#list类型" class="headerlink" title="list类型"></a>list类型</h2><p><img src="/2018/04/27/db-redis-basic/list.png" alt="count"></p>
+<h2 id="str类型"><a href="#str类型" class="headerlink" title="str类型"></a>str类型</h2><p><img src="/2018/04/27/db-redis-basic/str.png" alt="count"></p>
+<h2 id="set类型"><a href="#set类型" class="headerlink" title="set类型"></a>set类型</h2><p>还有zset类型</p>
+<h2 id="命令行操作"><a href="#命令行操作" class="headerlink" title="命令行操作"></a>命令行操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select 4 <span class="comment">#选择db4这个数据库 select 0选择的就是db0这个数据库</span></span><br><span class="line"><span class="built_in">set</span> key value <span class="comment">#设置了key为字符串的值value</span></span><br><span class="line">keys * <span class="comment">#查看所有的key</span></span><br><span class="line">hmset mainkey name testname value testvalue <span class="comment">#设置了一个hash，key是mainkey，value里面是name:testname, value:testvalue</span></span><br><span class="line">hgetall mainkey <span class="comment">#返回mainkey对应的值</span></span><br><span class="line">lpush testlist v1 <span class="comment">#key是testlist，值是列表，增加了一个值v1</span></span><br><span class="line">lrange testlist 1 10 <span class="comment">#获取testlist的1-10之间的值</span></span><br></pre></td></tr></table></figure>
+<h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><p><img src="/2018/04/27/db-redis-basic/namespace.png" alt="namespace"></p>
 
       
     </div>
@@ -509,8 +522,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -561,6 +583,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash类型"><span class="nav-number">1.</span> <span class="nav-text">hash类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list类型"><span class="nav-number">2.</span> <span class="nav-text">list类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str类型"><span class="nav-number">3.</span> <span class="nav-text">str类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set类型"><span class="nav-number">4.</span> <span class="nav-text">set类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行操作"><span class="nav-number">5.</span> <span class="nav-text">命令行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名空间"><span class="nav-number">6.</span> <span class="nav-text">命名空间</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
