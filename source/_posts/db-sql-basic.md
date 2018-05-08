@@ -148,3 +148,12 @@ SELECT column1, column2 FROM table_name GROUP BY column1 ORDER BY column2;
 ``` sql
 SELECT * FROM table_name WHERE column1 LIKE 'auto%';
 ```
+
+其中`%`可以匹配多个多个，`_`只能匹配单个字符
+
+### AVG函数
+
+``` sql
+SELECT AVG(column) FROM table_name;
+SELECT column1, column2 FROM table_name WHERE columnx > (SELECT AVG(columny) FROM table_name);
+```
