@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>[tool]-xampp的使用</title>
+      <link href="/2018/05/10/tool-xampp/"/>
+      <url>/2018/05/10/tool-xampp/</url>
+      <content type="html"><![CDATA[<p>本文主要记录了xampp的使用。</p><a id="more"></a><h2 id="远程访问数据库"><a href="#远程访问数据库" class="headerlink" title="远程访问数据库"></a>远程访问数据库</h2><p>默认情况是使用localhost/phpmyadmin只能在本机访问的，如果想通过其它机器访问，需要修改下面两个配置。</p><p><img src="/2018/05/10/tool-xampp/mysql-xampp.gif" alt="mysql-xampp"></p><p><img src="/2018/05/10/tool-xampp/mysql-auth.gif" alt="mysql-auth"></p>]]></content>
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>[tool]-远程连接工具的使用</title>
       <link href="/2018/05/10/tool-remote/"/>
       <url>/2018/05/10/tool-remote/</url>
