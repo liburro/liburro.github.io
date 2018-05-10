@@ -44,3 +44,29 @@ CREATE TABLE tb_accesslog (
 ``` sql
 INSERT INTO tb_websites VALUES (1, '百度', 'http://www.baidu.com', 'CN');
 ```
+
+## 命令行
+
+### 连接数据库
+
+``` bash
+mysql -hip -uuser -ppassword
+```
+
+### 显示数据库
+
+``` bash
+show databases;
+```
+
+### 使用数据库
+
+``` bash
+use database_name;
+```
+
+### 显示表
+
+``` bash
+show tables;
+```

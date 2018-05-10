@@ -26,7 +26,12 @@ grep ISM_Base_0490 output.xml #在output.xml文件中查找ISM_Base_0490
 -n: 打印所在行
 -v: 反向匹配
 -i: 忽略大小写
+-A n: 显示匹配的前n行
+-B n: 显示匹配的后n行
 
+``` bash
+grep -A 5 -B 5 teststr
+```
 
 ## dh/df
 
