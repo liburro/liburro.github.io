@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文主要使用MySQL来进行SQL语句练习。首先会创建一个数据库sqltest，会涉及两张表，tb_websites和tb_accesslog，第一张表里面有id name url country 几个字段，分别表示ID 名称 URL地址 国家，第二张表里面有id site_id accesscount date几个字典，分别表示ID tb_websites的ID 日访问量 日期。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T03:21:08.232Z">
+<meta property="og:updated_time" content="2018-05-10T09:30:49.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[mysql]-实例">
 <meta name="twitter:description" content="本文主要使用MySQL来进行SQL语句练习。首先会创建一个数据库sqltest，会涉及两张表，tb_websites和tb_accesslog，第一张表里面有id name url country 几个字段，分别表示ID 名称 URL地址 国家，第二张表里面有id site_id accesscount date几个字典，分别表示ID tb_websites的ID 日访问量 日期。">
@@ -426,6 +426,10 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_accesslog (</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span> AUTO_INCREMENT,</span><br><span class="line">  site_id <span class="built_in">INT</span>,</span><br><span class="line">  accesscount <span class="built_in">INT</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">  <span class="built_in">date</span> <span class="built_in">DATE</span></span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">innoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
 <h2 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h2><p>表创建完成后，里面没有数据，我们通过INSERT插入数据</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tb_websites <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'百度'</span>, <span class="string">'http://www.baidu.com'</span>, <span class="string">'CN'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -hip -uuser -ppassword</span><br></pre></td></tr></table></figure>
+<h3 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use database_name;</span><br></pre></td></tr></table></figure>
+<h3 id="显示表"><a href="#显示表" class="headerlink" title="显示表"></a>显示表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -581,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSERT"><span class="nav-number">2.</span> <span class="nav-text">INSERT</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSERT"><span class="nav-number">2.</span> <span class="nav-text">INSERT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接数据库"><span class="nav-number">3.1.</span> <span class="nav-text">连接数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示数据库"><span class="nav-number">3.2.</span> <span class="nav-text">显示数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用数据库"><span class="nav-number">3.3.</span> <span class="nav-text">使用数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示表"><span class="nav-number">3.4.</span> <span class="nav-text">显示表</span></a></li></ol></li></ol></div>
             
 
           </div>
