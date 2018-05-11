@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文主要使用MySQL来进行SQL语句练习。首先会创建一个数据库sqltest，会涉及两张表，tb_websites和tb_accesslog，第一张表里面有id name url country 几个字段，分别表示ID 名称 URL地址 国家，第二张表里面有id site_id accesscount date几个字典，分别表示ID tb_websites的ID 日访问量 日期。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-10T09:30:49.479Z">
+<meta property="og:updated_time" content="2018-05-11T02:51:16.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[mysql]-实例">
 <meta name="twitter:description" content="本文主要使用MySQL来进行SQL语句练习。首先会创建一个数据库sqltest，会涉及两张表，tb_websites和tb_accesslog，第一张表里面有id name url country 几个字段，分别表示ID 名称 URL地址 国家，第二张表里面有id site_id accesscount date几个字典，分别表示ID tb_websites的ID 日访问量 日期。">
@@ -430,6 +430,10 @@
 <h3 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
 <h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use database_name;</span><br></pre></td></tr></table></figure>
 <h3 id="显示表"><a href="#显示表" class="headerlink" title="显示表"></a>显示表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<h3 id="快速复制数据库"><a href="#快速复制数据库" class="headerlink" title="快速复制数据库"></a>快速复制数据库</h3><p>首先需要创建一个新的数据库，用于存储。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE `bk_sks_test` DEFAULT CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI;</span><br></pre></td></tr></table></figure>
+<p>然后使用mysqldump命令配置mysql进行复制，下面使用远程复制，如果是本机复制，就没有-h参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump sks_test -h10.10.11.117 -uroot  --add-drop-table | mysql bk_sks_test -h10.10.11.117 -uroot</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -543,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -589,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSERT"><span class="nav-number">2.</span> <span class="nav-text">INSERT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接数据库"><span class="nav-number">3.1.</span> <span class="nav-text">连接数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示数据库"><span class="nav-number">3.2.</span> <span class="nav-text">显示数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用数据库"><span class="nav-number">3.3.</span> <span class="nav-text">使用数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示表"><span class="nav-number">3.4.</span> <span class="nav-text">显示表</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSERT"><span class="nav-number">2.</span> <span class="nav-text">INSERT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接数据库"><span class="nav-number">3.1.</span> <span class="nav-text">连接数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示数据库"><span class="nav-number">3.2.</span> <span class="nav-text">显示数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用数据库"><span class="nav-number">3.3.</span> <span class="nav-text">使用数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示表"><span class="nav-number">3.4.</span> <span class="nav-text">显示表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速复制数据库"><span class="nav-number">3.5.</span> <span class="nav-text">快速复制数据库</span></a></li></ol></li></ol></div>
             
 
           </div>
