@@ -70,3 +70,17 @@ use database_name;
 ``` bash
 show tables;
 ```
+
+### 快速复制数据库
+
+首先需要创建一个新的数据库，用于存储。
+
+``` bash
+CREATE DATABASE `bk_sks_test` DEFAULT CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI;
+```
+
+然后使用mysqldump命令配置mysql进行复制，下面使用远程复制，如果是本机复制，就没有-h参数
+
+``` bash
+mysqldump sks_test -h10.10.11.117 -uroot  --add-drop-table | mysql bk_sks_test -h10.10.11.117 -uroot
+```
