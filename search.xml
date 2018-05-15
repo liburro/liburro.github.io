@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>[tool]-jenkins的基本使用</title>
+      <link href="/2018/05/15/tool-jenkins/"/>
+      <url>/2018/05/15/tool-jenkins/</url>
+      <content type="html"><![CDATA[<p>本文记录了jenkins的基本使用。</p><a id="more"></a><h2 id="任务触发器"><a href="#任务触发器" class="headerlink" title="任务触发器"></a>任务触发器</h2><h3 id="当前任务完成后触发其它任务"><a href="#当前任务完成后触发其它任务" class="headerlink" title="当前任务完成后触发其它任务"></a>当前任务完成后触发其它任务</h3><p><img src="/2018/05/15/tool-jenkins/post-build.png" alt="post"></p><h3 id="其它任务完成后触发当前任务"><a href="#其它任务完成后触发当前任务" class="headerlink" title="其它任务完成后触发当前任务"></a>其它任务完成后触发当前任务</h3><p><img src="/2018/05/15/tool-jenkins/pre-build.png" alt="pre"></p><h3 id="定时触发"><a href="#定时触发" class="headerlink" title="定时触发"></a>定时触发</h3><p><img src="/2018/05/15/tool-jenkins/build-prediodically.png" alt="time"></p>]]></content>
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>[tool]-wireshark</title>
       <link href="/2018/05/11/tool-wireshark/"/>
       <url>/2018/05/11/tool-wireshark/</url>
