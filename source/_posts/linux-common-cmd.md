@@ -38,3 +38,11 @@ grep -A 5 -B 5 teststr
 ## top
 
 ## ps
+
+## ntpdata
+
+如果需要和某个ntpserver进行时间同步，使用
+
+``` bash
+ntpdate ntpserver_ip
+```

@@ -122,6 +122,12 @@ npm install hexo-deployer-git --save
 hexo d
 ```
 
+使用下面的命令可以重新生成页面(推荐使用这个命令)
+
+``` bash
+hexo d -g
+```
+
 完成后，通过yourname.github.io就可以访问你的网页了。
 
 ## 新建文章
@@ -129,6 +135,8 @@ hexo d
 ``` bash
 hexo n name
 ```
+
+注意生成的文件在`source\_posts`这个目录下面，是一个md文件。
 
 其中name替换成你想要的名字，会在`source\_posts`下生成你新建的文件，默认是md格式的，可以打开这个文件按照md的格式进行编写文章了。
 

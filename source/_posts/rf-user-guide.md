@@ -5,7 +5,7 @@ tags:
 categories: robotframework
 ---
 
-robotframework是一个自动化测试框架。
+robotframework使用手册，robotframework是一个自动化测试框架。
 
 <!--more-->
 
@@ -133,4 +133,10 @@ from robot.api import logger
 ${ret.decode('utf-8')} # 这里ret是任意一个字符串，通过直接调用decode函数可以进行解码操作
 #同理
 ${ret.lower()} #可以直接返回小写
+```
+
+### split函数
+
+``` python
+${ret}  Set Variable  ${somestr.split(' ')[0]}
 ```
