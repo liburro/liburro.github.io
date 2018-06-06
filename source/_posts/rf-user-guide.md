@@ -140,3 +140,9 @@ ${ret.lower()} #可以直接返回小写
 ``` python
 ${ret}  Set Variable  ${somestr.split(' ')[0]}
 ```
+
+### 调用random库
+
+``` python
+${ret}  Evaluate  random.randint(1, 100)  random
+```

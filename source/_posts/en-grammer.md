@@ -99,6 +99,111 @@ We talked more than they did. 这里的more是副词，修饰talk，表示`更�
 
 ![english](en-grammer/en1.png)
 
+## 英语时态
+
+时间： 过去 现在 将来
+
+状态： 一般 进行 完成(对之前发生的状态的总结) 进行完成(对正在进行的动作的总结)
+
+![en-grammer](en-grammer\shitai.png)
+
+![en-grammer](en-grammer\shitai2.png)
+
+## 虚拟语气
+
+### wish句型
+
+对现在发生的动作，只需要把动词改为一般过去时即可。
+
+I wish that you were my brother.
+
+对过去发生的动作， 过去完成时。
+
+I wish that he had not failed the exam.
+
+对将来发生的动作，加入情态动词would could might should等即可。
+
+I wish that I could land on the Mars tomorrow.
+
+### If Then 句型
+
+其中If引导的是从句，then引导的是主句，有时候then也可以省略
+
+也分为下面三种情况：
+
+对现在发生的：
+
+if 主语 过去式， then 主语 would等几个情态动词 + 动词原型
+
+If I knew that, I would tell you.
+
+对过去发生的：
+
+If 主语 过去完成， then 主语 would等几个情态动词 + 现在完成时
+
+If I had worked hard, I might have passed the exam.
+
+对将来发生的：
+
+If 主语 were to/should 动词原型， then 主语 would等几个情态动词 动词原型
+
+If she should come, I would ask her for help.
+
+### 总结
+
+对于wish和if then句型，首先从句都是一样的结构，因为wish中that后面的也是从句，都是对现在的虚拟用过去式，对过去的虚拟用过去完成时，对将来的虚拟，使用情态动词+原型，
+对于if then句型，主句只需要在从句的基础上加上would等情态动词即可。
+
+对于if then句型，如果主句，也就是if使用了情态动词would could should might中任意一个，那么就是虚拟语气，也就需要注意主句的时态
+
+> 另外，主从据可以表达不同时间的虚拟 If they had set off yesterday, they would be here now. 意思是如果他们昨天出发，现在应该到这里了，也就是说他们昨天没有出发，现在也没有到这里，if从句是对过去的虚拟，then主句是对现在的虚拟，再看： If we shouldn't have an date this afternoon, I would go shopping now. 意思是如果不是下午有个约会，我现在已经去逛街了，也就是说，我们下午有个约会，现在我并没有去逛街。
+
+## 简单句
+
+主要有以下5类句型， 其中S主语 V谓语 O宾语 P表语 C补语
+
+S V
+
+S V O
+
+S V O O
+
+S V P
+
+S V O V
+
+### 简单句的区分
+
+S V O diff S V P
+
+首先回忆一下，系动词后面可以接表语，而且形容词和名称可以作为表语，并且S V P结构中 V 这个系动词替换为be动词后，语义基本不变。
+
+Tom got angry. angry是adj， S V P
+
+Tom got a fish. fish是n，got替换为be，Tom was a fish 明显语义不对，所以是 S V O
+
+Tom becomes a real man. man是n，got替换为be， Tom is a real man. 正确，所以是 S V P
+
+S V O O diff S V O C
+
+也有两种方法区分：
+
+O 这个宾语只能是名词
+
+省略主语与谓语，在O和另外一个结构，也就是还无法区分是O 还是 C的之间加入be动词，如果结构完整，并且意思基本一致，那么就是 S V O C，因为C 是对O的补充说明，句子意思应该完整。
+
+She puts apples *on the wooden dining table*. 介词短语无法充当名词，所以是 S V O C
+
+I think my brother *a clever boy*. 这里是名词，根据第二个方法 my brother is a clever boy. 句子意思基本一致，所以是 S V O C
+
+Mohter made my brother *a black sweater*. 这里是名词，根据第二个方法，my brother is a black sweater。 明显句子意思不对，所以是S V O O
+
+另外补语C如果省略了得话，句子意思会不完整，比如上面的She puts apples， I think my brother，省略了补语后，句子意思都不完整。
+
+I found the homework difficult.
+
+She heard Jean singing.
+
 ## 参考链接
 
 https://zhuanlan.zhihu.com/adingdemao
