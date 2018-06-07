@@ -204,6 +204,45 @@ I found the homework difficult.
 
 She heard Jean singing.
 
+## 副词的用法
+
+形容词修饰名词和代词，副词则是修饰除了名词和代词以外的词，比如修饰动词，形容词，副词，介词
+短语，不定式等
+
+副词分为三大类，dis分类，ad附属，con连接
+
+dis: 比如Clearly, we have got the trophy(很明显，我们拿到了奖杯) 其中Clearly修饰的是句子
+ad: She knows me well. well 修饰动词knows
+con: 连接两个句子， I'd like to help you. However, my hands are full.
+
+adv的位置：
+修饰动词： 位于动词之前，需要挨着动词 The guests loudly laughed. loudly在laughed之前
+位于动词之后，可以不挨着。 The guests laughed loudly.这里挨着
+She knows me well. well没有挨着knows
+
+修饰形容词：一般adv位于adj之前，并且挨着 John had a very beautiful daughter. very 修饰beautiful
+
+修饰adv： 需要挨着，并且前面的一个adv修饰后面一个adv
+She played piano very well. very 修饰well
+
+修饰其它结构：比如短语，不定式，句子等，adv需要位于被修饰结构之前
+
+The number is well above the March average. well修饰介词短语above
+I'm here just to make up the number. just修饰不定式to
+
+总结： adv一般位于被修饰的结构之前，并且紧邻，如果修饰动词，可以在动词之后，而且可以不挨着
+
+特殊的一些adv
+前面说adv不可以修饰名词和代词
+但是，一些adv可以用于强调名词和代词
+比如： Only you can think of yourself. Only 强调you
+We need to evaluate even the worst outcome. even修饰后面的outcome
+
+此类adv有 only even just等
+下面的几个作为强调，必须要使用逗号与主句分离
+We need of medical workers, especially surgeons. especially用于强调surgeons，用逗号和主句分离
+此类副词有 especially, particularly, notably, namely等
+
 ## 参考链接
 
 https://zhuanlan.zhihu.com/adingdemao
