@@ -36,7 +36,7 @@
       <title>[英语单词]-单词记忆</title>
       <link href="/2018/06/06/en-word/"/>
       <url>/2018/06/06/en-word/</url>
-      <content type="html"><![CDATA[<p>单词本</p><a id="more"></a><h2 id="记忆单词"><a href="#记忆单词" class="headerlink" title="记忆单词"></a>记忆单词</h2><p>maintenance n 维护 维修 保持 生活费用</p><p>enhancement n 增加 放大</p><h2 id="计算机相关单词"><a href="#计算机相关单词" class="headerlink" title="计算机相关单词"></a>计算机相关单词</h2><h3 id="bug-相关单词"><a href="#bug-相关单词" class="headerlink" title="bug 相关单词"></a>bug 相关单词</h3><p>severity(严重级别): unrated(未分级) negligible(微不足道的) minor(中等的) serious(严重的) critical(危险的) catastrophic(灾难的)</p><p>priority(优先级): urgent(立即) high normal low</p>]]></content>
+      <content type="html"><![CDATA[<p>单词本</p><a id="more"></a><h2 id="记忆单词"><a href="#记忆单词" class="headerlink" title="记忆单词"></a>记忆单词</h2><p>maintenance n 维护 维修 保持 生活费用</p><p>enhancement n 增加 放大</p><h2 id="记忆句子"><a href="#记忆句子" class="headerlink" title="记忆句子"></a>记忆句子</h2><p>Python is an easy to learn(learn是动词, to learn是不定式，作为adv词性修饰adj easy简单的), powerful(adj 强大的，修饰programming language) programming(现在分词具有adj性质，修饰n language) language. (主干是Python is a language.)</p><p>Python is an esay to learn, powerful programming language. It has efficient(adj, 有效率的，有能力的) high-level(高级的，高阶的) data structures and a simple(adj 简单的，单纯的，天真的) but effective(adj, 有效的，起作用的，实际的) approach(n 方法，途径; vt 接近，着手处理; vi 靠近) to object-oriented programming. Python’s elegant(adj 高雅的，优雅的，简练的，简洁的) syntax and dynamic(adj 动态的 n 动态， 动力) typing, together with its interpreted nature(解释语言的特性), make it an ideal(adj 理想的，完美的; n 理想 典范) laguage for scripting and rapid(adj 迅速的，飞快的) application development(n 发展，开发，发育) in many areas on most platforms.</p><h2 id="计算机相关单词"><a href="#计算机相关单词" class="headerlink" title="计算机相关单词"></a>计算机相关单词</h2><h3 id="bug-相关单词"><a href="#bug-相关单词" class="headerlink" title="bug 相关单词"></a>bug 相关单词</h3><p>severity(严重级别): unrated(未分级) negligible(微不足道的) minor(中等的) serious(严重的) critical(危险的) catastrophic(灾难的)</p><p>priority(优先级): urgent(立即) high normal low</p>]]></content>
       
       <categories>
           
@@ -113,12 +113,12 @@
       <url>/2018/05/21/windows-outlook/</url>
       <content type="html"><![CDATA[<p>本文主要记录了outlook的相关配置信息。</p><a id="more"></a><h2 id="密码记住功能"><a href="#密码记住功能" class="headerlink" title="密码记住功能"></a>密码记住功能</h2><p>有时候更改了密码，outlook在每次登陆的时候都要输入密码，就算点击了记住凭证也无效，每次打开outlook后都会弹出输入密码的提示框，可以按照下面的方式进行处理。</p><p><img src="/2018/05/21/windows-outlook/windows-outlook-password.gif" alt="password"></p>]]></content>
       
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
       
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-        </tags>
       
     </entry>
     
