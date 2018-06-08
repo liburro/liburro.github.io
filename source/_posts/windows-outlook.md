@@ -1,7 +1,8 @@
 ---
 title: '[windows]-outlook相关配置'
 date: 2018-05-21 17:56:37
-tags: 工具
+tags:
+categories: 工具
 ---
 
 本文主要记录了outlook的相关配置信息。
