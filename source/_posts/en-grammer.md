@@ -243,6 +243,96 @@ We need to evaluate even the worst outcome. even修饰后面的outcome
 We need of medical workers, especially surgeons. especially用于强调surgeons，用逗号和主句分离
 此类副词有 especially, particularly, notably, namely等
 
+## 副词类结构
+
+在七类辅助结构中(介词短语，不定式，分词，动名词，名词从句，定语从句，状语从句)中有4类结构可以作为副词使用，分别是介词短语，状语从句，分词，不定式
+
+它们和副词一样，有三类用法，disjunct(分离) adjunct(附属)　conjunct(连接) 三种
+
+四类结构都可以作为dis
+
+With your help, we will finish the task on time.
+
+To finish the project, the stated up all night.
+
+Because the asked me to do it, I did it.
+
+Followed by his dog, the hunter walked slowly in the forest.
+
+除了状语从句以外，其它三类结构都可以作为ad修饰v 和 adj，必须位于被修饰对象后面，必须和adj紧邻，但是v却可以不用。
+
+The guide led us through the forest. We are ready for the challenges.
+
+He used his influence to support us. I am glad to meet you.
+
+I spent two weeeks writing the essay.
+
+只有介词短语可以作为 con
+
+The won't back before five o'clock. In other word, you'll have to wait for nearly three hours.
+
+> 副词位置总结： 作为ad的时候才有位置的概念，其中一般的adv，只有修饰v的时候，可以放在v的后面，并且位置可以不紧邻，其它情况(包括位于v之前)都必须紧邻被修饰的结构，但是另外三种副词结构(不定式，分词，介词短语)修饰v和adj的时候，放在被修饰对象的后面，同样，修饰v的时候，位置可以不紧邻，其它情况都需要紧邻。
+
+### 注意副词的垂悬修饰
+
+先看逻辑主语
+
+Hearing their teacher's voice, the pupils stopped talking at once.
+
+现在分词Hearing their teacher's voice 作为状语，作为dis中有谓语hear,宾语their teacher's voice。缺少了主语，其实主语是被省略了的，为什么可以省略，因为和主句的the pupils是相同的，所以省略了。这个就是逻辑主语
+
+所有的非谓语动词(动名词，不定式，分词)都存在逻辑主语。
+
+如果一个分词的逻辑主语与主句的主语不相同，这个就叫做垂悬修饰，这是在英语中绝对不能出现的。
+
+Opening the window, stars were calling my name. 如果补足主语 Stars were opening the window，可以看见，这句表达式错误的，其实修改为下面的句式就正确了
+
+Opening the window, I heard stars calling my name.
+
+同理下面的句子
+
+To play tennis well, the racket(拍子) should be held properly.是错误的，改为
+
+To play tennis well, you should hold the racket properly.就是正确的了。
+
+## 形容词
+
+### 形容词的位置
+
+形容词只能修饰n和代词(不能修饰普通代词，比如He)，一般位于被修饰对象的前面，但是如果代词是复合代词(比如somethin)需要位于其之后。
+
+### 四类辅助结构作定语
+
+介词短语，后于名词/代词之后 We are taking care of kids from the slum(平民窟).
+
+定于从句，同上，The village where I was born was very small.
+
+分词，同上， The book bought from the bookstore is very interesting.
+
+不定式，同上， He is the man to go.
+
+可以看见，一般的adj是位于被修饰对象的前面，但是四类辅助结构都是放在被修饰对象的后面，为什么这里和中文差异这么大呢，因为中文里面有一个万能的'的'结构，但是英语里面没有这个结构
+
+正确的用法： He gave apples in the basket to me.  错误的用法： He gave in the basket apples to me.
+
+## 位置总结
+
+下面的总结是对于一般情况而言。
+
+形容词修饰名词和代词(普通代词不用修饰)
+
+副词修饰除了名词和代词以外的词，包括形容词，副词，动词，不定式，分词，介词短语等
+
+一般副词，位于被修饰对象之前，并且紧邻，如果修饰动词，可以在动词之后，并且位置可以不紧邻。
+
+一般形容词，位于被修饰对象之前，并且紧邻，但是修饰复合代词，一般位于符合代词之后。
+
+副词结构，状语从句，介词短语，不定式，分词， 只有在作为ad，也就是附加的情况下有位置的区分，需要位于被修饰对象后面，如果修饰动词，可以不紧邻
+
+形容词结构，定于从句，介词短语，不定式，分词， 一般位于被修饰对象的后面，并且紧邻。
+
+在总结： 一般词，位于被修饰对象的前面，结构性词，位于被修饰对象的后面。
+
 ## 参考链接
 
 https://zhuanlan.zhihu.com/adingdemao
