@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文记录了python通过telnet链接设备的是使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-03T08:17:42.817Z">
+<meta property="og:updated_time" content="2018-06-11T10:46:14.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[python]-lib-telnet">
 <meta name="twitter:description" content="本文记录了python通过telnet链接设备的是使用。">
@@ -419,7 +419,12 @@
       
         <p>本文记录了python通过telnet链接设备的是使用。</p>
 <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> telnetlib <span class="keyword">import</span> Telnet</span><br><span class="line"></span><br><span class="line">tel = Telnet(<span class="string">'your_ipaddr'</span>)</span><br><span class="line">tel.read_until(<span class="string">'expected str'</span>, timeout) <span class="comment">#这里返回读取到的回显</span></span><br><span class="line">tel.write(<span class="string">'something'</span> + self.cr)</span><br><span class="line">tel.expect([<span class="string">'es1'</span>, <span class="string">'es2'</span>, <span class="string">'\d+'</span>], timeout) <span class="comment">#这里第一个参数必须是列表，里面内容可以是正则表达式，返回3个元素的元组，最后一个是读取到的内容</span></span><br></pre></td></tr></table></figure>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> telnetlib <span class="keyword">import</span> Telnet</span><br><span class="line"></span><br><span class="line">tel = Telnet(<span class="string">'your_ipaddr'</span>)</span><br><span class="line">tel.read_until(<span class="string">'expected str'</span>, timeout) <span class="comment">#这里返回读取到的回显</span></span><br><span class="line">tel.write(<span class="string">'something'</span> + self.cr)</span><br><span class="line">tel.expect([<span class="string">'es1'</span>, <span class="string">'es2'</span>, <span class="string">'\d+'</span>], timeout) <span class="comment">#这里第一个参数必须是列表，里面内容可以是正则表达式，返回3个元素的元组，最后一个是读取到的内容</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意： expect返回一个三元组，第一个是匹配到expect第一个参数里面的索引，比如上例中如果匹配到了es1那么返回0，返回的第二个内容是匹配到的对象，第三个是读取的回显，如果没有匹配到任何东西，返回的是-1，第二个返回的对象是None,第三个返回的内容，有可能有，有可能为空</p>
+</blockquote>
+<h2 id="下发特殊命令"><a href="#下发特殊命令" class="headerlink" title="下发特殊命令"></a>下发特殊命令</h2><h3 id="下发ctrl-c"><a href="#下发ctrl-c" class="headerlink" title="下发ctrl+c"></a>下发ctrl+c</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tn.write(<span class="string">'\x03'</span>)</span><br></pre></td></tr></table></figure>
+<p>对直接下发<code>\x03</code>就代表了ctrl+c</p>
 
       
     </div>
@@ -508,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -524,7 +538,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -541,15 +555,6 @@
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
             
 
           </nav>
@@ -569,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下发特殊命令"><span class="nav-number">2.</span> <span class="nav-text">下发特殊命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下发ctrl-c"><span class="nav-number">2.1.</span> <span class="nav-text">下发ctrl+c</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
