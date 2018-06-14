@@ -28,3 +28,13 @@ Python is an esay to learn, powerful programming language. It has efficient(adj,
 severity(严重级别): unrated(未分级) negligible(微不足道的) minor(中等的) serious(严重的) critical(危险的) catastrophic(灾难的)
 
 priority(优先级): urgent(立即) high normal low
+
+### 编程相关
+
+argument 表示函数的参数
+
+parameter 表示调用函数的时候传递的参数
+
+keyword arguments 表示关键字参数，就是有默认值的参数
+
+

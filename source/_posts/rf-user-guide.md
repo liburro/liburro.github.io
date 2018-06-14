@@ -11,6 +11,15 @@ robotframework使用手册，robotframework是一个自动化测试框架。
 
 ## 基础实例
 ## case的组织
+
+### 运行前后的动作
+
+在`__init__`文件中，可以在setting里面配置 `Suite Setup` 和 `Suite Teardown`分别表示执行测试套前执行的动作和执行完成测试套后需要执行的动作
+
+在每个case文件中，同样也可以在setting部分配置上述内容， 但是是针对当前的case文件，里面还可以增加`Test Setup` 和 `Test Teardown`表示对每个case的执行前动作和执行后动作
+
+在每个case里面，也可以增加`[Setup] [Teardown]`操作，和上面的`Test Setup` `Test Teardown`一个效果，但是如果都指定了，那么以case里面的，也就是`[Setup] [Teardown]`生效，外层的`Test Setup Test Teardown`不生效(也就是根本不会执行).
+
 ## 运行命令
 
 ## 所有可用的设置
