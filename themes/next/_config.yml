@@ -93,6 +93,7 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
+  专项: /categories/special
   python: /categories/python
   robotframework: /categories/robotframework
   数据库: /categories/database
