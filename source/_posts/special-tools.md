@@ -31,6 +31,88 @@ categories: 专项
 
 ### 命令行
 
+#### 网络配置
+
+##### IP地址配置
+
+###### CentOS
+
+```
+vim etc/sysconfig/network-scripts/ifcfg-eth0
+device=eth0
+bootproto=dhcp
+onboot=yes
+hwaddr=09:0a:xxxxx
+IPADDR=10.0.1.27
+NETMASK=255.255.255.0
+GATEWAY=10.0.1.1
+
+service network restart
+```
+
+##### DNS配置
+
+如果直接修改`/etc/resolv.conf`里面配置`namesever 61.139.2.69`，可以临时进行使用。
+
+##### 防火墙配置
+
+参考文章：[CentOS 6和CentOS 7防火墙的关闭](https://www.linuxidc.com/Linux/2016-12/138979.htm)
+
+###### CentOS7
+
+```
+CentOS7
+
+[root@localhost ~]# firewall-cmd --state
+not running
+[root@localhost ~]# systemctl list-unit-files | grep firewalld
+firewalld.service                             disabled
+[root@localhost ~]# systemctl status firewalld.service
+● firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+     Docs: man:firewalld(1)
+[root@localhost ~]#
+
+systemctl stop firewalld.service #停止firewall
+systemctl disable firewalld.service #禁止firewall开机启动
+
+启动一个服务：systemctl start firewalld.service
+关闭一个服务：systemctl stop firewalld.service
+重启一个服务：systemctl restart firewalld.service
+显示一个服务的状态：systemctl status firewalld.service
+在开机时启用一个服务：systemctl enable firewalld.service
+在开机时禁用一个服务：systemctl disable firewalld.service
+查看服务是否开机启动：systemctl is-enabled firewalld.service;echo $?
+查看已启动的服务列表：systemctl list-unit-files|grep enabled
+
+firewall-cmd --list-ports
+
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+命令含义：
+
+–zone #作用域
+
+–add-port=80/tcp #添加端口，格式为：端口/通讯协议
+
+–permanent #永久生效，没有此参数重启后失效
+
+firewall-cmd --reload #重启firewall
+```
+
+#### 远程登陆
+
+##### SSH
+
+centos默认root用户是不能通过ssh登陆的，需要修改如下配置即可。
+
+```
+vi /etc/ssh/sshd_config
+PermitRootLogin yes 这一行不应该被注释掉
+
+/etc/rc.d/init.d/sshd restart 
+```
+
 #### 系统信息
 
 1. 查看内存信息: `cat /proc/meminfo`
@@ -46,13 +128,38 @@ chgrp jenkins testdir #修改所属用户组
 chgrp -R jenkins testdir #递归
 ```
 
+#### 软件安装
+
+##### CentOS
+
+centos下可以使用的是yum进行安装。直接使用这种方式在线安装，可以避免各种依赖库的问题。
+
+```
+yum search java | grep jdk #搜索可用的jdk包
+yum install java-1.8.0-openjdk.x86_64 #安装jdk
+```
+
+当然如果你下载了rpm安装包，可以使用：
+
+```
+rpm -ivh xx.rpm
+```
+
 ## Jenkins
+
+可以参考[W3C](https://www.w3cschool.cn/jenkins/)的相关内容。
 
 ### 安装
 
 #### Windows下安装
 
 直接下载jenkins的jar包，放到任意目录下，在cmd命令行执行 `java -jar jenkins.war` 即可，然后通过 https://ip:8080/ 就可访问了，最开始会提示进行安装，安装提示即可简单的完成。
+
+#### CentOS下安装
+
+直接通过yum安装好java环境，到[jenkins官方](https://pkg.jenkins.io/redhat)下载好对应的版本，通过rmp的方式安装好。
+
+安装完成后，使用`/etc/init.d/jenkins start`即可启动jenkins。如果不能通过ip地址加上8080端口访问，检查防火墙的配置和jenkins的log文件`/var/log/jenkins/jenkins.log`。
 
 ### 常用url
 
@@ -73,6 +180,14 @@ chgrp -R jenkins testdir #递归
 有这么一个需求： 有个名为X的job，需要等待A, B, C, D等几个job都完成后再执行， 默认的jenkins的job flow都是只要A, B, C, D中任何一个完成了， 就会触发X这个job， 不满足条件，但是有个join plugin这个插件可以完成这个功能， 但是需要附加一个job，比如名为Z，
 则需要在Z这个job里面配置构建后步骤，需要增加两个步骤， 一是 Build other projects， 里面填入 A, B, C, D几个job， 二是增加 Join Trigger(这个需要安装了join plugin这个插件后才会有的选项)， 在Projects to build once, after all downstream projects have finished这个里面
 填入X这个job。那么运行Zjob完成后，会触发A, B, C, D的运行，并且X这个job会等待A, B, C, D都完成后再执行。
+
+#### 控制台时间戳
+
+控制台显示时间戳的插件是： Timestamper
+
+#### job迁移
+
+当Jenkins服务器A需要同步Jenkins服务器B的某个job，可以在服务器A上安装job-import插件，然后再服务器A上
 
 ### 常见问题
 
@@ -134,5 +249,10 @@ tcpdump -i eth0 port 12348
 #### 快捷键
 
 注释: ctrl + q
+
+## 好用工具
+
+git-web界面： gitlab, gitblit
+
 
 

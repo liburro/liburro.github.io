@@ -266,6 +266,68 @@ test()
 
 这个就对了，调用方式为`fun1(1)(test)()`，首先`fun1(1)`返回的是`inf`，接收一个参数，返回x，这个x就是我们的原函数test，这里会打印haha然后打印hehe。
 
+### property
+
+> python中有一个非常有用的装饰器函数`property`，看下面的例子
+
+```
+class Student(object):
+    def __init__(self, age):
+        self._age = age
+    
+    @property
+    def age(self):
+        return self._age
+    
+    @age.setter
+    def age(self, age): #如果这里不配置setter，那么age就变成了只读的属性
+        if -1 < age < 200:
+            self._age = age
+    
+s1 = Student(5)
+print s1.age
+s1.age = 1000
+print s1.age
+```
+
+看官方给的如下例子:
+
+```
+class C(object):
+    def __init__(self):
+        self._x = None
+
+    def getx(self):
+        return self._x
+
+    def setx(self, value):
+        self._x = value
+
+    def delx(self):
+        del self._x
+
+    x = property(getx, setx, delx, "I'm the 'x' property.")
+```
+
+```
+class C(object):
+    def __init__(self):
+        self._x = None
+
+    @property
+    def x(self):
+        """I'm the 'x' property."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @x.deleter
+    def x(self):
+        del self._x
+```
+
 ## 常用库
 
 ### os.path
