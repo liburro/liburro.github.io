@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文主要记录了robotframework框架的一些使用笔记。 本文实际发布时间是2018-06-25，为了置顶，所以修改了发布时间为将来的某个时间。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-29T00:41:29.732Z">
+<meta property="og:updated_time" content="2018-07-02T09:50:27.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[专项]-robotframework">
 <meta name="twitter:description" content="本文主要记录了robotframework框架的一些使用笔记。 本文实际发布时间是2018-06-25，为了置顶，所以修改了发布时间为将来的某个时间。">
@@ -438,6 +438,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 指定运行tag</span><br><span class="line">-i tagname</span><br><span class="line"># 排除包含tag的case</span><br><span class="line">-e tagname</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 指定运行级别</span><br><span class="line">-L trace</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 指定变量值</span><br><span class="line">-v var:value</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-v的优先级最高，里面的变量都会变成这个-v指定的值，记住是任何情况下最高，执行的环境中有-v来指定top文件，里面有引入的变量，如果-v了top里面的变量，都是以-v里面的生效，不是-v top里面的生效。</p>
+</blockquote>
 <h2 id="日志修复"><a href="#日志修复" class="headerlink" title="日志修复"></a>日志修复</h2><p>有时候使用robot跑了脚本，如果想中间停止，或者中间抛出了错误，只产生了一个output.xml文件，这个文件不便于阅读，想转换为好看的log.html，可以使用下面的方法进行日志修复。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install robotfixml</span><br><span class="line">python -m robotfixml output.xml fixed.xml</span><br><span class="line">rebot fixed.xml</span><br></pre></td></tr></table></figure>
 
