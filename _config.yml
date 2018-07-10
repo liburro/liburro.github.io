@@ -61,6 +61,7 @@ category_map:
   数据库: database
   工具: tools
   爬虫: spider
+  历史: history
   
 tag_map:
 
