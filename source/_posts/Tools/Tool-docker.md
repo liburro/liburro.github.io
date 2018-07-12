@@ -2,7 +2,7 @@
 title: Tool-docker
 date: 2018-07-04 10:31:39
 tags:
-categories: 工具
+categories: tools
 ---
 
 本文主要记录了docker的基本使用。

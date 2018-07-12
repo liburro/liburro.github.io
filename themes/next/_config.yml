@@ -94,15 +94,16 @@ index_with_subtitle: false
 menu:
   home: / || home
   #专项: /categories/special
+  bigdata: /categories/bigdata
   python: /categories/python
   robotframework: /categories/robotframework
-  数据库: /categories/database
+  #数据库: /categories/database
   linux: /categories/linux
   #about: /about/ || user
   #tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  历史: /categories/history
+  history: /categories/history
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat

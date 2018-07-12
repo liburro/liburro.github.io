@@ -2,7 +2,7 @@
 title: Linux-网络配置
 date: 2018-07-04 10:03:09
 tags:
-categories: Linux
+categories: linux
 ---
 
 主要记录了Linux网络相关的配置，比如IP地址，防火墙等。
