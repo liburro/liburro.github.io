@@ -82,14 +82,13 @@
 <meta name="description" content="记录个人笔记，便于后期查询与备忘">
 <meta name="keywords" content="python, robot, robotframework, linux, english, coding, test, automation">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="LiBurro">
+<meta property="og:url" content="http://yoursite.com/categories/linux/index.html">
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="记录个人笔记，便于后期查询与备忘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T10:33:06.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="LiBurro">
 <meta name="twitter:description" content="记录个人笔记，便于后期查询与备忘">
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/categories/linux/"/>
 
 
 
 
 
-  <title>分类 | LiBurro</title>
+  <title>分类: linux | LiBurro</title>
   
 
 
@@ -145,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,43 +312,55 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block category">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bigdata/">bigdata</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
-        
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>linux<small>分类</small>
+        </h1>
       </div>
+
       
-      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/07/04/Linux/Linux-网络配置/" itemprop="url">
+              
+                <span itemprop="name">Linux-网络配置</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-07-04T10:03:09+08:00"
+              content="2018-07-04" >
+          07-04
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
+
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -569,10 +580,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1021,6 +1028,47 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+d('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
