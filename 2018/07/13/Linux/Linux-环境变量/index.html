@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="主要记录了Linux网络相关的配置，比如IP地址，防火墙等。">
+<meta name="description" content="配置文件可以修改/etc/profile下面，这个是针对全局用户的，如果想针对某个用户修改，比如root用户，可以使用/root/.bashrc文件 配置格式文件里面的配置格式 12export JAVA_HOME=/path/to/javaexport PATH=/path/to/add:$&amp;#123;PATH&amp;#125;">
 <meta name="keywords" content="python, robot, robotframework, linux, english, coding, test, automation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-网络配置">
-<meta property="og:url" content="http://yoursite.com/2018/07/04/Linux/Linux-网络配置/index.html">
+<meta property="og:title" content="Linux-环境变量">
+<meta property="og:url" content="http://yoursite.com/2018/07/13/Linux/Linux-环境变量/index.html">
 <meta property="og:site_name" content="LiBurro">
-<meta property="og:description" content="主要记录了Linux网络相关的配置，比如IP地址，防火墙等。">
+<meta property="og:description" content="配置文件可以修改/etc/profile下面，这个是针对全局用户的，如果想针对某个用户修改，比如root用户，可以使用/root/.bashrc文件 配置格式文件里面的配置格式 12export JAVA_HOME=/path/to/javaexport PATH=/path/to/add:$&amp;#123;PATH&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-12T06:46:11.944Z">
+<meta property="og:updated_time" content="2018-07-13T08:16:44.147Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-网络配置">
-<meta name="twitter:description" content="主要记录了Linux网络相关的配置，比如IP地址，防火墙等。">
+<meta name="twitter:title" content="Linux-环境变量">
+<meta name="twitter:description" content="配置文件可以修改/etc/profile下面，这个是针对全局用户的，如果想针对某个用户修改，比如root用户，可以使用/root/.bashrc文件 配置格式文件里面的配置格式 12export JAVA_HOME=/path/to/javaexport PATH=/path/to/add:$&amp;#123;PATH&amp;#125;">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/04/Linux/Linux-网络配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/13/Linux/Linux-环境变量/"/>
 
 
 
 
 
-  <title>Linux-网络配置 | LiBurro</title>
+  <title>Linux-环境变量 | LiBurro</title>
   
 
 
@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/Linux/Linux-网络配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/Linux/Linux-环境变量/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Burro">
@@ -354,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux-网络配置</h1>
+          <h1 class="post-title" itemprop="name headline">Linux-环境变量</h1>
         
 
         <div class="post-meta">
@@ -366,8 +366,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T10:03:09+08:00">
-                2018-07-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T16:14:26+08:00">
+                2018-07-13
               </time>
             
 
@@ -377,28 +377,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -406,7 +384,7 @@
 
           
           
-             <span id="/2018/07/04/Linux/Linux-网络配置/" class="leancloud_visitors" data-flag-title="Linux-网络配置">
+             <span id="/2018/07/13/Linux/Linux-环境变量/" class="leancloud_visitors" data-flag-title="Linux-环境变量">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -437,11 +415,10 @@
       
 
       
-        <p>主要记录了Linux网络相关的配置，比如IP地址，防火墙等。</p>
-<a id="more"></a>
-<h2 id="IP配置"><a href="#IP配置" class="headerlink" title="IP配置"></a>IP配置</h2><h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">首先编辑文件：vim etc/sysconfig/network-scripts/ifcfg-eth0</span><br><span class="line">device=eth0</span><br><span class="line">bootproto=dhcp #如果需要手动配置IP地址，这里配置为none</span><br><span class="line">onboot=yes #是否随系统启动</span><br><span class="line">hwaddr=09:0a #mac地址</span><br><span class="line">IPADDR=10.0.1.27  #IP地址</span><br><span class="line">NETMASK=255.255.255.0  </span><br><span class="line">GATEWAY=10.0.1.1</span><br><span class="line">最后重启服务：service network restart</span><br></pre></td></tr></table></figure>
-<h2 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h2><h3 id="CentOS-1"><a href="#CentOS-1" class="headerlink" title="CentOS"></a>CentOS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编辑文件：vim etc/sysconfig/network-scripts/route-eth0</span><br><span class="line">格式为：10.0.0.0/8 via 192.168.53.1，其中192.168.53.1这个是网关</span><br></pre></td></tr></table></figure>
-<h2 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h2><h3 id="CentOS-2"><a href="#CentOS-2" class="headerlink" title="CentOS"></a>CentOS</h3><p>如果遇到root用户不能登陆的情况，修改<code>/etc/ssh/sshd_config</code>文件，取消<code>PermitRootLogin</code>这个参数的注释。</p>
+        <a id="more"></a>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>可以修改/etc/profile下面，这个是针对全局用户的，如果想针对某个用户修改，比如root用户，可以使用/root/.bashrc文件</p>
+<h2 id="配置格式"><a href="#配置格式" class="headerlink" title="配置格式"></a>配置格式</h2><p>文件里面的配置格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/path/to/java</span><br><span class="line">export PATH=/path/to/add:$&#123;PATH&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,15 +443,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/13/Database/数据库-SQL语句/" rel="next" title="数据库-SQL语句">
+                <i class="fa fa-chevron-left"></i> 数据库-SQL语句
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/04/Tools/Tool-docker/" rel="prev" title="Tool-docker">
-                Tool-docker <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -597,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IP配置"><span class="nav-number">1.</span> <span class="nav-text">IP配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS"><span class="nav-number">1.1.</span> <span class="nav-text">CentOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由配置"><span class="nav-number">2.</span> <span class="nav-text">路由配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS-1"><span class="nav-number">2.1.</span> <span class="nav-text">CentOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH配置"><span class="nav-number">3.</span> <span class="nav-text">SSH配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS-2"><span class="nav-number">3.1.</span> <span class="nav-text">CentOS</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件"><span class="nav-number">1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置格式"><span class="nav-number">2.</span> <span class="nav-text">配置格式</span></a></li></ol></div>
             
 
           </div>
