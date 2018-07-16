@@ -2,7 +2,7 @@
 title: Linux-定时任务
 date: 2018-07-12 15:17:06
 tags:
-categories: Linux
+categories: linux
 ---
 
 本文主要记录了Linux的定时任务，比如crontab。

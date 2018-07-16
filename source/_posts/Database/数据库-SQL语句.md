@@ -11,7 +11,7 @@ categories: database
 
 ## 分组
 
-分组的原则是先按照条件选取数据，然后按照分组统计数据。
+分组的原则是先按照条件选取数据，然后分组，然后统计数据。
 
 比如现在有下面的一张表：
 
@@ -37,7 +37,7 @@ areaid count tx
 2   1   200
 ```
 
-注意上面对client使用的distinct去重，如果不用得到的结果是，整体过程是先选择areaid，并且按照areaid分组，然后统计每个组下面的去重后的client的数量，同时统计每个组下面的tx的和，注意没有根据任何去重。
+注意上面对client使用的distinct去重，如果不用去重得到的结果是：
 
 ```
 areaid count tx
@@ -60,6 +60,6 @@ areaid count tx
 2   1   200
 ```
 
-也就是先按照了areaid分组，在按照了client进行分组
+也就是先按照了areaid分组，在按照了client进行分组，然后在统计。
 
 

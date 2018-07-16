@@ -2,7 +2,7 @@
 title: Linux-文件处理
 date: 2018-07-12 15:16:55
 tags:
-categories: Linux
+categories: linux
 ---
 
 本文主要记录了Linux的文件处理，比如压缩解压等。

@@ -2,7 +2,7 @@
 title: Linux-环境变量
 date: 2018-07-13 16:14:26
 tags:
-categories:
+categories: linux
 ---
 
 <!--more-->
