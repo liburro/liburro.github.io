@@ -87,10 +87,13 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="本文主要记录了SQL语句的使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T08:04:19.271Z">
+<meta property="og:image" content="http://yoursite.com/2018/07/13/Database/数据库-SQL语句/group1.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/13/Database/数据库-SQL语句/group1_result.png">
+<meta property="og:updated_time" content="2018-07-17T06:28:01.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库-SQL语句">
 <meta name="twitter:description" content="本文主要记录了SQL语句的使用。">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/13/Database/数据库-SQL语句/group1.png">
 
 
 
@@ -439,6 +442,8 @@
       
         <p>本文主要记录了SQL语句的使用。</p>
 <a id="more"></a>
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO test (areaid, datefmt, client, mac) VALUES (1, 20180911, 100, &apos;x&apos;), (1, 20180911, 100, &apos;y&apos;) #插入多组数据之间用,分割</span><br></pre></td></tr></table></figure>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">order by</span><br></pre></td></tr></table></figure>
 <h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p>分组的原则是先按照条件选取数据，然后分组，然后统计数据。</p>
 <p>比如现在有下面的一张表：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">areaid client tx</span><br><span class="line">1   a   100</span><br><span class="line">1   a   200</span><br><span class="line">1   b   150</span><br><span class="line">2   c   200</span><br></pre></td></tr></table></figure>
@@ -453,6 +458,14 @@
 <p>得到的结果是</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">areaid count tx</span><br><span class="line">1   2   300</span><br><span class="line">1   1   150</span><br><span class="line">2   1   200</span><br></pre></td></tr></table></figure>
 <p>也就是先按照了areaid分组，在按照了client进行分组，然后在统计。</p>
+<h3 id="处理分组内容"><a href="#处理分组内容" class="headerlink" title="处理分组内容"></a>处理分组内容</h3><p>假设有下面一张表(test)。</p>
+<p>其中areaid是一个整形的类似ID的数据，datefmt是日期的整形表示，比如20180711表示的是2018年7月11日。</p>
+<p><img src="group1.png" alt="group1"></p>
+<p>需要选取areaid, datefmt，datefmt统计到月，并且按照月areaid, datefmt进行分组，统计client在每个areaid的每月的总数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select areaid, datefmt/100 as datefmt, sum(client) from test group by areaid, datefmt/100; #如果需要转换类型，使用下面的语句</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select areaid, int(datefmt/100) as datefmt, sum(client) from test group by areaid, int(datefmt/100);</span><br></pre></td></tr></table></figure>
+<p>统计结果：</p>
+<p><img src="group1_result.png" alt="group1_result"></p>
 
       
     </div>
@@ -612,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分组"><span class="nav-number">1.</span> <span class="nav-text">分组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入数据"><span class="nav-number">1.</span> <span class="nav-text">插入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组"><span class="nav-number">3.</span> <span class="nav-text">分组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#处理分组内容"><span class="nav-number">3.1.</span> <span class="nav-text">处理分组内容</span></a></li></ol></li></ol></div>
             
 
           </div>
