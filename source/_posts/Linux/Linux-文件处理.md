@@ -17,3 +17,11 @@ categories: linux
 zip -r test.zip test #压缩test，压缩文件名为test.zip，另外压缩文件解压后就和test完全一致，没有里面在嵌套一层的说法
 zip -t test.zip #在不解压的情况下查看压缩文件的内容
 ```
+
+## 文件查看
+
+### tail
+
+```
+tail -f path/to/file #实时查看增加的文件内容
+```
