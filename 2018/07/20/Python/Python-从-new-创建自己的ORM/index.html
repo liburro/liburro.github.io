@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiBurro">
 <meta property="og:description" content="ORM是Object Relational Mapping的简写，就是在操作数据库的时候，使用一个类来代表了一个表。而__new__是python里面一个很特殊的函数，本文也引入了type, metaclass等概念。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T09:24:52.584Z">
+<meta property="og:updated_time" content="2018-07-23T09:17:35.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python-从__new__创建自己的ORM">
 <meta name="twitter:description" content="ORM是Object Relational Mapping的简写，就是在操作数据库的时候，使用一个类来代表了一个表。而__new__是python里面一个很特殊的函数，本文也引入了type, metaclass等概念。">
@@ -442,7 +442,10 @@
 <h2 id="new"><a href="#new" class="headerlink" title="new"></a><strong>new</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class A(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        print(&quot;A:__init__&quot;)</span><br><span class="line"></span><br><span class="line">    def __new__(cls, *args, **kwargs):</span><br><span class="line">        print(&quot;A:__new__&quot;)</span><br><span class="line">        return object.__new__(cls)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">print(type(a))</span><br></pre></td></tr></table></figure>
 <p>上面输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A:__new__</span><br><span class="line">A:__init__</span><br><span class="line">&lt;class &apos;__main__.A&apos;&gt;</span><br></pre></td></tr></table></figure>
-
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p><code>__new__</code>需要返回的是一个实例，这个实例可以是其它类通过<code>__new__</code>返回的实例，比如<code>object.__new__(cls[,...])</code>，也可以是自己定义的一个实例，比如直接返回一个字符串，这个字符串是str的一个实例对象，其中<code>__new__</code>是一个静态函数，而且不需要使用<code>@static</code>等关键字说明，它一定是一个静态函数，第一个参数一定是当前类。</p>
+<p><code>__new__</code>是创造一个实例对象，<code>__init__</code>是定制化这个实例对象。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://www.jianshu.com/p/b0f4d9c9afbb" target="_blank" rel="noopener">https://www.jianshu.com/p/b0f4d9c9afbb</a></p>
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3>
       
     </div>
     
@@ -475,6 +478,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/23/Python/Python-翻译-数据模型/" rel="prev" title="Python-翻译-数据模型">
+                Python-翻译-数据模型 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -551,7 +558,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -597,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#new"><span class="nav-number">1.</span> <span class="nav-text">new</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#new"><span class="nav-number">1.</span> <span class="nav-text">new</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#说明"><span class="nav-number">1.1.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">2.1.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笔记"><span class="nav-number">2.2.</span> <span class="nav-text">笔记</span></a></li></ol></li></ol></div>
             
 
           </div>
